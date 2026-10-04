@@ -1,0 +1,58 @@
+{
+  "analysis": "natural_failure_consequence",
+  "answer_correct_overall": {
+    "ci_high": 0.7775,
+    "ci_low": 0.7175,
+    "n_resamples": 1000,
+    "point": 0.74875
+  },
+  "contingency": {
+    "degraded_and_correct": 70,
+    "degraded_and_wrong": 68,
+    "intact_and_correct": 529,
+    "intact_and_wrong": 133
+  },
+  "experiment": "E4_k3_v2",
+  "n_clean_traces": 800,
+  "n_consequential": 68,
+  "n_degraded": 138,
+  "n_queries": 800,
+  "n_severe": 4,
+  "note": "correctness is SQuAD-normalised containment of the gold span in the generated answer; token_f1 is reported alongside as a continuous check",
+  "p_wrong_given_degraded": {
+    "ci_high": 0.5797101449275363,
+    "ci_low": 0.4057971014492754,
+    "n_resamples": 1000,
+    "point": 0.4927536231884058
+  },
+  "p_wrong_given_intact": {
+    "ci_high": 0.2326283987915408,
+    "ci_low": 0.17220543806646527,
+    "n_resamples": 1000,
+    "point": 0.20090634441087613
+  },
+  "token_f1_degraded": {
+    "ci_high": 0.13336060930464178,
+    "ci_low": 0.096276700485476,
+    "n_resamples": 1000,
+    "point": 0.11418819833650146
+  },
+  "token_f1_intact": {
+    "ci_high": 0.15186702179960332,
+    "ci_low": 0.13559628132122778,
+    "n_resamples": 1000,
+    "point": 0.14395850623992007
+  },
+  "token_f1_overall": {
+    "ci_high": 0.14653103210937454,
+    "ci_low": 0.13165711557999238,
+    "n_resamples": 1000,
+    "point": 0.13882312812658035
+  },
+  "wrongness_lift": {
+    "ci_high": 0.37384397922519147,
+    "ci_low": 0.20518892165327163,
+    "n_resamples": 1000,
+    "point": 0.2918472787775297
+  }
+}

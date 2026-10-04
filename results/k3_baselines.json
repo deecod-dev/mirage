@@ -1,0 +1,319 @@
+{
+  "analysis": "external_baseline_comparison",
+  "by_condition": {
+    "T0:grounding": {
+      "judge": {
+        "auroc_probed": 0.9628773752061913,
+        "auroc_probed_sd": 0.004912122745364077,
+        "auroc_unsupervised": 0.9627041666666667
+      },
+      "mirage": {
+        "auroc_probed": 0.9991617175919195,
+        "auroc_probed_sd": 0.0005140968364710844
+      },
+      "nli": {
+        "auroc_probed": 0.5720948701440481,
+        "auroc_probed_sd": 0.02275527786739799,
+        "auroc_unsupervised": 0.5708333333333333
+      },
+      "nli-large": {
+        "auroc_probed": 0.8389036393224076,
+        "auroc_probed_sd": 0.011826116659947115,
+        "auroc_unsupervised": 0.8393333333333333
+      },
+      "trivial": {
+        "auroc_probed": 0.4965106350802037,
+        "auroc_probed_sd": 0.026893064311162687
+      }
+    },
+    "T0:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.6202354610629177,
+        "auroc_probed_sd": 0.02023858176040978,
+        "auroc_unsupervised": 0.616675
+      },
+      "mirage": {
+        "auroc_probed": 0.7697513704204733,
+        "auroc_probed_sd": 0.024109518382617618
+      },
+      "nli": {
+        "auroc_probed": 0.494938586524335,
+        "auroc_probed_sd": 0.021716800585215672,
+        "auroc_unsupervised": 0.5062416666666667
+      },
+      "nli-large": {
+        "auroc_probed": 0.5306591885926059,
+        "auroc_probed_sd": 0.055222755885632864,
+        "auroc_unsupervised": 0.5540166666666667
+      },
+      "trivial": {
+        "auroc_probed": 0.6814974715397402,
+        "auroc_probed_sd": 0.02178614147028816
+      }
+    },
+    "T0:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.610562856795773,
+        "auroc_probed_sd": 0.019284884182818866,
+        "auroc_unsupervised": 0.6078
+      },
+      "mirage": {
+        "auroc_probed": 0.7385690840062913,
+        "auroc_probed_sd": 0.020549308507934804
+      },
+      "nli": {
+        "auroc_probed": 0.5045076620685579,
+        "auroc_probed_sd": 0.03221883069786757,
+        "auroc_unsupervised": 0.5197166666666667
+      },
+      "nli-large": {
+        "auroc_probed": 0.5457138598240614,
+        "auroc_probed_sd": 0.023924686113064392,
+        "auroc_unsupervised": 0.546625
+      },
+      "trivial": {
+        "auroc_probed": 0.508179440927532,
+        "auroc_probed_sd": 0.022960267853605134
+      }
+    },
+    "T0:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.5016577498187781,
+        "auroc_probed_sd": 0.020237854372486923,
+        "auroc_unsupervised": 0.5168
+      },
+      "mirage": {
+        "auroc_probed": 1.0,
+        "auroc_probed_sd": 0.0
+      },
+      "nli": {
+        "auroc_probed": 0.48554139418887265,
+        "auroc_probed_sd": 0.019632741756717535,
+        "auroc_unsupervised": 0.5003666666666666
+      },
+      "nli-large": {
+        "auroc_probed": 0.48778371687983385,
+        "auroc_probed_sd": 0.019504625373228345,
+        "auroc_unsupervised": 0.5048291666666667
+      },
+      "trivial": {
+        "auroc_probed": 1.0,
+        "auroc_probed_sd": 2.2204460492503132e-17
+      }
+    },
+    "T1:grounding": {
+      "judge": {
+        "auroc_probed": 0.8076127552223378,
+        "auroc_probed_sd": 0.020778192523577113,
+        "auroc_unsupervised": 0.8104499999999999
+      },
+      "mirage": {
+        "auroc_probed": 0.5635550624949386,
+        "auroc_probed_sd": 0.025824952990038137
+      },
+      "nli": {
+        "auroc_probed": 0.5047567842906663,
+        "auroc_probed_sd": 0.03725113188836296,
+        "auroc_unsupervised": 0.5231166666666667
+      },
+      "nli-large": {
+        "auroc_probed": 0.7647423995974448,
+        "auroc_probed_sd": 0.022027978087556407,
+        "auroc_unsupervised": 0.7680708333333333
+      },
+      "trivial": {
+        "auroc_probed": 0.4945552718471929,
+        "auroc_probed_sd": 0.01837390326444868
+      }
+    },
+    "T1:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.6665489093483113,
+        "auroc_probed_sd": 0.025190879766972134,
+        "auroc_unsupervised": 0.6603458333333332
+      },
+      "mirage": {
+        "auroc_probed": 0.848385895865407,
+        "auroc_probed_sd": 0.017145190391594366
+      },
+      "nli": {
+        "auroc_probed": 0.5097627826726103,
+        "auroc_probed_sd": 0.02714884569121434,
+        "auroc_unsupervised": 0.5237041666666666
+      },
+      "nli-large": {
+        "auroc_probed": 0.4339887939418896,
+        "auroc_probed_sd": 0.020755854057085524,
+        "auroc_unsupervised": 0.5608916666666666
+      },
+      "trivial": {
+        "auroc_probed": 0.6931255428004884,
+        "auroc_probed_sd": 0.023234291314515824
+      }
+    },
+    "T1:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.8544865622680433,
+        "auroc_probed_sd": 0.01838387380077786,
+        "auroc_unsupervised": 0.8553041666666668
+      },
+      "mirage": {
+        "auroc_probed": 0.9928984650381605,
+        "auroc_probed_sd": 0.0022092050810063124
+      },
+      "nli": {
+        "auroc_probed": 0.575727703739825,
+        "auroc_probed_sd": 0.03032096189187124,
+        "auroc_unsupervised": 0.58865
+      },
+      "nli-large": {
+        "auroc_probed": 0.8130994449487946,
+        "auroc_probed_sd": 0.018227475630393408,
+        "auroc_unsupervised": 0.8157541666666666
+      },
+      "trivial": {
+        "auroc_probed": 0.6065439877201539,
+        "auroc_probed_sd": 0.01953808007151787
+      }
+    },
+    "T1:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.5150003786609447,
+        "auroc_probed_sd": 0.02131668059381138,
+        "auroc_unsupervised": 0.5228875000000001
+      },
+      "mirage": {
+        "auroc_probed": 0.9904375506815177,
+        "auroc_probed_sd": 0.0024114822550699495
+      },
+      "nli": {
+        "auroc_probed": 0.498930987441576,
+        "auroc_probed_sd": 0.02866370320344014,
+        "auroc_unsupervised": 0.5188999999999999
+      },
+      "nli-large": {
+        "auroc_probed": 0.5534947919873692,
+        "auroc_probed_sd": 0.02054371088511913,
+        "auroc_unsupervised": 0.5530208333333333
+      },
+      "trivial": {
+        "auroc_probed": 0.518144976619451,
+        "auroc_probed_sd": 0.04059684721606024
+      }
+    },
+    "T2:grounding": {
+      "judge": {
+        "auroc_probed": 0.708114349958703,
+        "auroc_probed_sd": 0.02021117522277703,
+        "auroc_unsupervised": 0.7088166666666667
+      },
+      "mirage": {
+        "auroc_probed": 0.5010037840271104,
+        "auroc_probed_sd": 0.025561456246424242
+      },
+      "nli": {
+        "auroc_probed": 0.5225690282563058,
+        "auroc_probed_sd": 0.029614651391811568,
+        "auroc_unsupervised": 0.5266
+      },
+      "nli-large": {
+        "auroc_probed": 0.6875320336196683,
+        "auroc_probed_sd": 0.022911677725832,
+        "auroc_unsupervised": 0.6970749999999999
+      },
+      "trivial": {
+        "auroc_probed": 0.5026474990849742,
+        "auroc_probed_sd": 0.02045032898361802
+      }
+    },
+    "T2:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.5474201648623623,
+        "auroc_probed_sd": 0.019227862470540185,
+        "auroc_unsupervised": 0.5453833333333333
+      },
+      "mirage": {
+        "auroc_probed": 0.5394012034868908,
+        "auroc_probed_sd": 0.0228592259071022
+      },
+      "nli": {
+        "auroc_probed": 0.5318267231397941,
+        "auroc_probed_sd": 0.03679344618373534,
+        "auroc_unsupervised": 0.540025
+      },
+      "nli-large": {
+        "auroc_probed": 0.49479866897700087,
+        "auroc_probed_sd": 0.02864691605795849,
+        "auroc_unsupervised": 0.5085708333333334
+      },
+      "trivial": {
+        "auroc_probed": 0.5142019322829923,
+        "auroc_probed_sd": 0.024474171741720376
+      }
+    },
+    "T2:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.6434524525489301,
+        "auroc_probed_sd": 0.021046945137004693,
+        "auroc_unsupervised": 0.63755
+      },
+      "mirage": {
+        "auroc_probed": 0.9039316978906471,
+        "auroc_probed_sd": 0.01103071489060619
+      },
+      "nli": {
+        "auroc_probed": 0.5092723548055171,
+        "auroc_probed_sd": 0.030129594228232033,
+        "auroc_unsupervised": 0.52155
+      },
+      "nli-large": {
+        "auroc_probed": 0.6810063985935437,
+        "auroc_probed_sd": 0.02883680439344606,
+        "auroc_unsupervised": 0.6817124999999999
+      },
+      "trivial": {
+        "auroc_probed": 0.5369260951768069,
+        "auroc_probed_sd": 0.025982081754894006
+      }
+    },
+    "T2:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.5019387551332762,
+        "auroc_probed_sd": 0.018960909917209962,
+        "auroc_unsupervised": 0.5119208333333334
+      },
+      "mirage": {
+        "auroc_probed": 0.45837291876644004,
+        "auroc_probed_sd": 0.022904308698559802
+      },
+      "nli": {
+        "auroc_probed": 0.5005762332221984,
+        "auroc_probed_sd": 0.027415422690422825,
+        "auroc_unsupervised": 0.5165708333333333
+      },
+      "nli-large": {
+        "auroc_probed": 0.5447559554890902,
+        "auroc_probed_sd": 0.020199461077010022,
+        "auroc_unsupervised": 0.541525
+      },
+      "trivial": {
+        "auroc_probed": 0.488119210782663,
+        "auroc_probed_sd": 0.028654891908818522
+      }
+    }
+  },
+  "device": "cuda:0",
+  "experiment": "E4_k3_v2",
+  "n_queries": 800,
+  "n_traces": 2600,
+  "note": "'nli' is the SelfCheckGPT-NLI scoring function applied to (evidence, answer); it is NOT SelfCheckGPT, which needs sampled generations this pipeline does not produce.",
+  "repeats": 25,
+  "seconds_per_trace": {
+    "judge": 0.16682753561691452,
+    "mirage": 0.112,
+    "nli": 0.03684691428045671,
+    "nli-large": 0.014095785239926325,
+    "trivial": 0.112
+  },
+  "timing_comparable": true
+}

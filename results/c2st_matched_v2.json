@@ -1,0 +1,368 @@
+{
+  "analysis": "query_matched_c2st",
+  "by_condition": {
+    "T0:query_retrieval": {
+      "external": {
+        "D": 0.01598889109303725,
+        "D_upper_bound": 0.1583852410236064,
+        "ci_high": 0.5791926205118032,
+        "ci_low": 0.4370134893870264,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5258282086887522,
+          "mean": 0.4971612775243008,
+          "repeats": 10
+        },
+        "point": 0.5079944455465186,
+        "verdict": "underpowered"
+      },
+      "mirage": {
+        "D": 0.4544733187859551,
+        "D_upper_bound": 0.5961317198968457,
+        "ci_high": 0.7980658599484228,
+        "ci_low": 0.6572108708589566,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5275143820670501,
+          "mean": 0.4986748660979964,
+          "repeats": 10
+        },
+        "point": 0.7272366593929775,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.24895853997222783,
+        "D_upper_bound": 0.3950307478674866,
+        "ci_high": 0.6975153739337433,
+        "ci_low": 0.5492908153144218,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5335846062289229,
+          "mean": 0.49106526482840707,
+          "repeats": 10
+        },
+        "point": 0.6244792699861139,
+        "verdict": "distinguishable"
+      }
+    },
+    "T0:source_degradation": {
+      "external": {
+        "D": 0.11660384844276939,
+        "D_upper_bound": 0.19779210474112285,
+        "ci_high": 0.5988960523705614,
+        "ci_low": 0.5281838920849038,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5221781392580838,
+          "mean": 0.4973358460622893,
+          "repeats": 10
+        },
+        "point": 0.5583019242213847,
+        "verdict": "distinguishable"
+      },
+      "mirage": {
+        "D": 0.301329101368776,
+        "D_upper_bound": 0.3930966078159095,
+        "ci_high": 0.6965483039079547,
+        "ci_low": 0.6179230311446142,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5160880777623488,
+          "mean": 0.5022555048601468,
+          "repeats": 10
+        },
+        "point": 0.650664550684388,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.04146002777226743,
+        "D_upper_bound": 0.12756397540170594,
+        "ci_high": 0.5235072406268597,
+        "ci_low": 0.43621801229914703,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": true,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5189049791707996,
+          "mean": 0.4949196587978575,
+          "repeats": 10
+        },
+        "point": 0.4792699861138663,
+        "verdict": "underpowered"
+      }
+    },
+    "T1:query_retrieval": {
+      "external": {
+        "D": 0.02884348343582621,
+        "D_upper_bound": 0.16064868081729822,
+        "ci_high": 0.5556149573497321,
+        "ci_low": 0.4196756595913509,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5455465185479071,
+          "mean": 0.48513588573695704,
+          "repeats": 10
+        },
+        "point": 0.4855782582820869,
+        "verdict": "underpowered"
+      },
+      "mirage": {
+        "D": 0.6553461614758975,
+        "D_upper_bound": 0.7387175163658004,
+        "ci_high": 0.8693587581829002,
+        "ci_low": 0.7857915096211069,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5583614362229717,
+          "mean": 0.4818309859154929,
+          "repeats": 10
+        },
+        "point": 0.8276730807379488,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.29986113866296393,
+        "D_upper_bound": 0.40461019638960516,
+        "ci_high": 0.7023050981948026,
+        "ci_low": 0.5983872247569927,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5528863320769689,
+          "mean": 0.4886510612973617,
+          "repeats": 10
+        },
+        "point": 0.649930569331482,
+        "verdict": "distinguishable"
+      }
+    },
+    "T1:source_degradation": {
+      "external": {
+        "D": 0.10486014679627065,
+        "D_upper_bound": 0.2974429676651458,
+        "ci_high": 0.6487214838325729,
+        "ci_low": 0.4573953580638762,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5406070224161873,
+          "mean": 0.49363023209680623,
+          "repeats": 10
+        },
+        "point": 0.5524300733981353,
+        "verdict": "underpowered"
+      },
+      "mirage": {
+        "D": 0.7079944455465186,
+        "D_upper_bound": 0.8480460226145605,
+        "ci_high": 0.9240230113072803,
+        "ci_low": 0.7789625074390002,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5369966276532434,
+          "mean": 0.4925014878000396,
+          "repeats": 10
+        },
+        "point": 0.8539972227732593,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.3989287839714344,
+        "D_upper_bound": 0.5366097996429278,
+        "ci_high": 0.7683048998214639,
+        "ci_low": 0.6385637770283673,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5312041261654434,
+          "mean": 0.5005673477484626,
+          "repeats": 10
+        },
+        "point": 0.6994643919857172,
+        "verdict": "distinguishable"
+      }
+    },
+    "T2:query_retrieval": {
+      "external": {
+        "D": 0.07998413013291017,
+        "D_upper_bound": 0.16577762348740332,
+        "ci_high": 0.5041152549097401,
+        "ci_low": 0.41711118825629834,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5368577663162071,
+          "mean": 0.4982741519539774,
+          "repeats": 10
+        },
+        "point": 0.4600079349335449,
+        "verdict": "underpowered"
+      },
+      "mirage": {
+        "D": 0.223646101963896,
+        "D_upper_bound": 0.31688553858361423,
+        "ci_high": 0.6584427692918071,
+        "ci_low": 0.5629627058123388,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5414203531045427,
+          "mean": 0.5061773457647292,
+          "repeats": 10
+        },
+        "point": 0.611823050981948,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.07399325530648682,
+        "D_upper_bound": 0.16463201745685363,
+        "ci_high": 0.5823160087284268,
+        "ci_low": 0.4900674469351319,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": true,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5478079746082126,
+          "mean": 0.49590755802420156,
+          "repeats": 10
+        },
+        "point": 0.5369966276532434,
+        "verdict": "underpowered"
+      }
+    },
+    "T2:source_degradation": {
+      "external": {
+        "D": 0.08224558619321554,
+        "D_upper_bound": 0.22039277921047407,
+        "ci_high": 0.5182364610196389,
+        "ci_low": 0.38980361039476297,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5059908748264234,
+          "mean": 0.48007934933544927,
+          "repeats": 10
+        },
+        "point": 0.45887720690339223,
+        "verdict": "underpowered"
+      },
+      "mirage": {
+        "D": 0.1446141638563776,
+        "D_upper_bound": 0.28637175163658,
+        "ci_high": 0.64318587581829,
+        "ci_low": 0.5079994048799841,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5227930966078159,
+          "mean": 0.4948760166633604,
+          "repeats": 10
+        },
+        "point": 0.5723070819281888,
+        "verdict": "distinguishable"
+      },
+      "n_natural": 71,
+      "n_queries": 71,
+      "n_synthetic": 355,
+      "surface": {
+        "D": 0.07994445546518558,
+        "D_upper_bound": 0.21092045229121203,
+        "ci_high": 0.605460226145606,
+        "ci_low": 0.4834259075580242,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.1": false,
+        "equivalent_at_0.15": false,
+        "equivalent_at_0.2": false,
+        "n_resamples": 1000,
+        "permutation_null": {
+          "max": 0.5176353898036105,
+          "mean": 0.4995715135885736,
+          "repeats": 10
+        },
+        "point": 0.5399722277325928,
+        "verdict": "underpowered"
+      }
+    }
+  },
+  "design": "both classes restricted to queries that have a natural failure, so every query contributes a natural and a synthetic trace",
+  "experiment": "E4_fingerprint_v2",
+  "margins": [
+    0.05,
+    0.1,
+    0.15,
+    0.2
+  ],
+  "n_natural": 232
+}

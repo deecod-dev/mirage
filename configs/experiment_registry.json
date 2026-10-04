@@ -1,0 +1,99 @@
+[
+  {
+    "experiment_id": "C7_aegis_external_v1",
+    "system": "AEGIS@18fecc5641235a67299cd832632839c9c80244d6",
+    "dataset": "AEGIS released evaluation sample",
+    "fault_family": "FM-1.1,FM-2.2",
+    "tier_or_mechanism": "available-vs-decoupled",
+    "sample_n": 600,
+    "split_seed": 20260823,
+    "primary_statistic": "paired delta AUROC with task-cluster bootstrap CI",
+    "threshold": 0.05,
+    "analysis_status": "confirmatory",
+    "result_file": "results/external_aegis_audit_v3.json"
+  },
+  {
+    "experiment_id": "C7_aegis_external_v2_weak",
+    "system": "AEGIS@18fecc5641235a67299cd832632839c9c80244d6",
+    "dataset": "AEGIS released evaluation sample",
+    "fault_family": "released successful single-injection subset",
+    "tier_or_mechanism": "strategy contrast; not effect-matched",
+    "sample_n": 61,
+    "split_seed": 20260823,
+    "primary_statistic": "mechanism AUROC",
+    "threshold": 0.05,
+    "analysis_status": "diagnostic",
+    "result_file": "results/external_aegis_audit_v3.json"
+  },
+  {
+    "experiment_id": "C8_v2_severity_residual",
+    "system": "MIRAGE RAG pipeline",
+    "dataset": "HotpotQA",
+    "fault_family": "source_degradation",
+    "tier_or_mechanism": "rank-vs-lexical effect-matched",
+    "sample_n": null,
+    "split_seed": 11,
+    "primary_statistic": "severity-only and severity-weighted mechanism AUROC",
+    "threshold": 0.05,
+    "analysis_status": "confirmatory robustness",
+    "result_file": "results/matched_effect_source_v3.json"
+  },
+  {
+    "experiment_id": "C9_v4_bootstrap_k2",
+    "system": "MIRAGE RAG pipeline",
+    "dataset": "HotpotQA",
+    "fault_family": "query_retrieval,source_degradation",
+    "tier_or_mechanism": "T0,T1,T2; all and V1-clean candidate sets",
+    "sample_n": 800,
+    "split_seed": 11,
+    "primary_statistic": "winner-agreement probability and regret CI",
+    "threshold": null,
+    "analysis_status": "confirmatory robustness",
+    "result_file": "results/decision_validity_v3.json"
+  },
+  {
+    "experiment_id": "C9_v4_bootstrap_k3",
+    "system": "MIRAGE RAG pipeline",
+    "dataset": "HotpotQA",
+    "fault_family": "query_retrieval,source_degradation",
+    "tier_or_mechanism": "T0,T1,T2; all and V1-clean candidate sets",
+    "sample_n": 800,
+    "split_seed": 11,
+    "primary_statistic": "winner-agreement probability and regret CI",
+    "threshold": null,
+    "analysis_status": "confirmatory replication",
+    "result_file": "results/k3_decision_validity_v2.json"
+  },
+  {
+    "experiment_id": "C10_2wiki_pilot",
+    "system": "MIRAGE RAG pipeline",
+    "dataset": "2WikiMultiHopQA validation pilot",
+    "fault_family": "natural retrieval degradation",
+    "tier_or_mechanism": "clean",
+    "sample_n": 200,
+    "split_seed": 20260823,
+    "primary_statistic": "natural degradation and consequential-failure rate",
+    "threshold": "project at least 250 natural degradations at N=1000",
+    "analysis_status": "pilot; excluded from confirmatory partition",
+    "result_file": "results/2wiki_pilot_natural_labels.json"
+  },
+  {
+    "experiment_id": "C10_2wiki_confirmatory_v3",
+    "system": "MIRAGE RAG pipeline",
+    "dataset": "2WikiMultiHopQA validation confirmatory partition",
+    "fault_family": "query_retrieval,source_degradation",
+    "tier_or_mechanism": "T0,T1,T2 and natural",
+    "sample_n": 1000,
+    "split_seed": 20260823,
+    "primary_statistic": "query-matched V3, V4 bootstrap, restoration-placebo effect",
+    "threshold": 0.05,
+    "analysis_status": "complete confirmatory replication",
+    "result_file": "results/2wiki_c2st_matched_v3.json",
+    "secondary_result_files": [
+      "results/2wiki_natural_labels_v3.json",
+      "results/2wiki_baselines_v3.json",
+      "results/2wiki_decision_validity_v3.json",
+      "results/2wiki_counterfactual_v3.json"
+    ]
+  }
+]

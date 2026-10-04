@@ -1,0 +1,55 @@
+{
+  "analysis": "counterfactual_gold_restoration",
+  "causal_effect": {
+    "ci_high": 0.3,
+    "ci_low": 0.12222222222222223,
+    "n_resamples": 1000,
+    "point": 0.2111111111111111
+  },
+  "causally_verified_queries": [
+    "5a7587705542992db9473674",
+    "5a7d2aa05542995f4f40221f",
+    "5a7fb90655429969796c1b34",
+    "5a821b4b5542995ce29dccab",
+    "5a82edae55429966c78a6a9f",
+    "5a85eed75542996432c5713b",
+    "5a862da855429960ec39b640",
+    "5a8790785542993e715abfac",
+    "5a8ba45b554299240d9c2051",
+    "5a8f68795542992414482ab5",
+    "5a90580655429933b8a204ef",
+    "5ab8848d55429916710eb07b",
+    "5aba6f3e55429955dce3ee21",
+    "5abcd19c5542993a06baf971",
+    "5add1c485542992c1e3a253d",
+    "5ae3fec55542995dadf242a4",
+    "5ae40d405542996836b02c28",
+    "5ae7b271554299540e5a564d",
+    "5ae7bdc05542993210983f29"
+  ],
+  "experiment": "E4_fingerprint_v2",
+  "mcnemar": {
+    "discordant": 19,
+    "p_value": 3.814697265625e-06,
+    "rescued_by_gold_only": 19,
+    "rescued_by_placebo_only": 0
+  },
+  "n_causally_verified": 19,
+  "n_degraded_and_wrong": 90,
+  "n_intervened": 90,
+  "note": "every intervened trace was wrong under the original context, so a correct answer after restoration is a rescue",
+  "rescue_rate_gold": {
+    "ci_high": 0.4111111111111111,
+    "ci_low": 0.2111111111111111,
+    "n_resamples": 1000,
+    "point": 0.3111111111111111
+  },
+  "rescue_rate_placebo": {
+    "ci_high": 0.15555555555555556,
+    "ci_low": 0.044444444444444446,
+    "n_resamples": 1000,
+    "point": 0.1
+  },
+  "sufficient_for_detector_fit": false,
+  "verdict": "natural retrieval degradation is causally consequential: restoring the missing gold paragraph rescues answers well above the placebo rate"
+}

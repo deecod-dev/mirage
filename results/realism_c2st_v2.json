@@ -1,0 +1,139 @@
+{
+  "analysis": "realism_classifier_two_sample_test",
+  "by_condition": {
+    "T0:query_retrieval": {
+      "external": {
+        "ci_high": 0.5954889650085058,
+        "ci_low": 0.49791600709704026,
+        "n_resamples": 1000,
+        "point": 0.5439396551724138
+      },
+      "mirage": {
+        "ci_high": 0.8306650973576865,
+        "ci_low": 0.7567604935035058,
+        "n_resamples": 1000,
+        "point": 0.7949712643678161
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.7317417926424308,
+        "ci_low": 0.6454244801297441,
+        "n_resamples": 1000,
+        "point": 0.6856034482758621
+      }
+    },
+    "T0:source_degradation": {
+      "external": {
+        "ci_high": 0.6872457582081203,
+        "ci_low": 0.6036887979277872,
+        "n_resamples": 1000,
+        "point": 0.6462586206896552
+      },
+      "mirage": {
+        "ci_high": 0.7182568891974309,
+        "ci_low": 0.6407646669957063,
+        "n_resamples": 1000,
+        "point": 0.677801724137931
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.6785927368415027,
+        "ci_low": 0.5952505195164909,
+        "n_resamples": 1000,
+        "point": 0.6366954022988506
+      }
+    },
+    "T1:query_retrieval": {
+      "external": {
+        "ci_high": 0.6200393705737028,
+        "ci_low": 0.5337667403920795,
+        "n_resamples": 1000,
+        "point": 0.5758333333333333
+      },
+      "mirage": {
+        "ci_high": 0.8753333640654322,
+        "ci_low": 0.8259294925569228,
+        "n_resamples": 1000,
+        "point": 0.8498117816091953
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.6864527578941146,
+        "ci_low": 0.6203268247765694,
+        "n_resamples": 1000,
+        "point": 0.6539870689655173
+      }
+    },
+    "T1:source_degradation": {
+      "external": {
+        "ci_high": 0.749148400426347,
+        "ci_low": 0.6650758115079365,
+        "n_resamples": 1000,
+        "point": 0.7096034482758621
+      },
+      "mirage": {
+        "ci_high": 0.9601806060102792,
+        "ci_low": 0.9174049665442433,
+        "n_resamples": 1000,
+        "point": 0.9402298850574713
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.7842118913529681,
+        "ci_low": 0.7015107267388351,
+        "n_resamples": 1000,
+        "point": 0.7426149425287356
+      }
+    },
+    "T2:query_retrieval": {
+      "external": {
+        "ci_high": 0.6721676765146781,
+        "ci_low": 0.590099186799618,
+        "n_resamples": 1000,
+        "point": 0.6289612068965518
+      },
+      "mirage": {
+        "ci_high": 0.7412528229688502,
+        "ci_low": 0.6687945053154317,
+        "n_resamples": 1000,
+        "point": 0.7044482758620689
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.6528863326283442,
+        "ci_low": 0.5726099572858202,
+        "n_resamples": 1000,
+        "point": 0.6128735632183908
+      }
+    },
+    "T2:source_degradation": {
+      "external": {
+        "ci_high": 0.5633524425260363,
+        "ci_low": 0.46748027961100586,
+        "n_resamples": 1000,
+        "point": 0.5151408045977011
+      },
+      "mirage": {
+        "ci_high": 0.6495256359790759,
+        "ci_low": 0.5601827416141082,
+        "n_resamples": 1000,
+        "point": 0.602212643678161
+      },
+      "n_synthetic": 1500,
+      "surface": {
+        "ci_high": 0.4994118078658586,
+        "ci_low": 0.41021964760776486,
+        "n_resamples": 1000,
+        "point": 0.45738505747126434
+      }
+    }
+  },
+  "experiment": "E4_fingerprint_v2",
+  "n_natural": 232,
+  "note": "AUROC near 0.5 means the synthetic tier is indistinguishable from natural degradation under that representation; 1.0 means trivially recognisable as manufactured",
+  "representations": [
+    "surface",
+    "external",
+    "mirage"
+  ]
+}

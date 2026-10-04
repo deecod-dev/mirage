@@ -1,0 +1,269 @@
+{
+  "analysis": "c2st_equivalence",
+  "by_condition": {
+    "T0:query_retrieval": {
+      "external": {
+        "D": 0.08787931034482765,
+        "D_upper_bound": 0.19097793001701158,
+        "ci_high": 0.5954889650085058,
+        "ci_low": 0.49791600709704026,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.5439396551724138,
+        "verdict": "underpowered: no difference detected but equivalence not established"
+      },
+      "mirage": {
+        "D": 0.5899425287356321,
+        "D_upper_bound": 0.6613301947153729,
+        "ci_high": 0.8306650973576865,
+        "ci_low": 0.7567604935035058,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.7949712643678161,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.3712068965517241,
+        "D_upper_bound": 0.46348358528486155,
+        "ci_high": 0.7317417926424308,
+        "ci_low": 0.6454244801297441,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6856034482758621,
+        "verdict": "distinguishable"
+      }
+    },
+    "T0:source_degradation": {
+      "external": {
+        "D": 0.29251724137931046,
+        "D_upper_bound": 0.37449151641624057,
+        "ci_high": 0.6872457582081203,
+        "ci_low": 0.6036887979277872,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6462586206896552,
+        "verdict": "distinguishable"
+      },
+      "mirage": {
+        "D": 0.3556034482758621,
+        "D_upper_bound": 0.43651377839486183,
+        "ci_high": 0.7182568891974309,
+        "ci_low": 0.6407646669957063,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.677801724137931,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.27339080459770115,
+        "D_upper_bound": 0.35718547368300535,
+        "ci_high": 0.6785927368415027,
+        "ci_low": 0.5952505195164909,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6366954022988506,
+        "verdict": "distinguishable"
+      }
+    },
+    "T1:query_retrieval": {
+      "external": {
+        "D": 0.15166666666666662,
+        "D_upper_bound": 0.24007874114740568,
+        "ci_high": 0.6200393705737028,
+        "ci_low": 0.5337667403920795,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.5758333333333333,
+        "verdict": "distinguishable"
+      },
+      "mirage": {
+        "D": 0.6996235632183907,
+        "D_upper_bound": 0.7506667281308643,
+        "ci_high": 0.8753333640654322,
+        "ci_low": 0.8259294925569228,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.8498117816091953,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.30797413793103456,
+        "D_upper_bound": 0.3729055157882293,
+        "ci_high": 0.6864527578941146,
+        "ci_low": 0.6203268247765694,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6539870689655173,
+        "verdict": "distinguishable"
+      }
+    },
+    "T1:source_degradation": {
+      "external": {
+        "D": 0.41920689655172416,
+        "D_upper_bound": 0.498296800852694,
+        "ci_high": 0.749148400426347,
+        "ci_low": 0.6650758115079365,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.7096034482758621,
+        "verdict": "distinguishable"
+      },
+      "mirage": {
+        "D": 0.8804597701149426,
+        "D_upper_bound": 0.9203612120205584,
+        "ci_high": 0.9601806060102792,
+        "ci_low": 0.9174049665442433,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.9402298850574713,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.4852298850574712,
+        "D_upper_bound": 0.5684237827059362,
+        "ci_high": 0.7842118913529681,
+        "ci_low": 0.7015107267388351,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.7426149425287356,
+        "verdict": "distinguishable"
+      }
+    },
+    "T2:query_retrieval": {
+      "external": {
+        "D": 0.25792241379310354,
+        "D_upper_bound": 0.34433535302935625,
+        "ci_high": 0.6721676765146781,
+        "ci_low": 0.590099186799618,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6289612068965518,
+        "verdict": "distinguishable"
+      },
+      "mirage": {
+        "D": 0.40889655172413786,
+        "D_upper_bound": 0.4825056459377004,
+        "ci_high": 0.7412528229688502,
+        "ci_low": 0.6687945053154317,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.7044482758620689,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.22574712643678163,
+        "D_upper_bound": 0.30577266525668834,
+        "ci_high": 0.6528863326283442,
+        "ci_low": 0.5726099572858202,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.6128735632183908,
+        "verdict": "distinguishable"
+      }
+    },
+    "T2:source_degradation": {
+      "external": {
+        "D": 0.030281609195402126,
+        "D_upper_bound": 0.12670488505207267,
+        "ci_high": 0.5633524425260363,
+        "ci_low": 0.46748027961100586,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.5151408045977011,
+        "verdict": "underpowered: no difference detected but equivalence not established"
+      },
+      "mirage": {
+        "D": 0.20442528735632193,
+        "D_upper_bound": 0.29905127195815173,
+        "ci_high": 0.6495256359790759,
+        "ci_low": 0.5601827416141082,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.602212643678161,
+        "verdict": "distinguishable"
+      },
+      "surface": {
+        "D": 0.08522988505747131,
+        "D_upper_bound": 0.17956070478447028,
+        "ci_high": 0.4994118078658586,
+        "ci_low": 0.41021964760776486,
+        "equivalent_at_0.025": false,
+        "equivalent_at_0.05": false,
+        "equivalent_at_0.075": false,
+        "n_resamples": 1000,
+        "point": 0.45738505747126434,
+        "verdict": "distinguishable"
+      }
+    }
+  },
+  "diagnosis": {
+    "T2:source_degradation/surface": {
+      "as_run": {
+        "ci_high": 0.4988466869610786,
+        "ci_low": 0.4117328326441848,
+        "n_resamples": 200,
+        "point": 0.45738505747126434
+      },
+      "balanced": {
+        "ci_high": 0.49501659149103877,
+        "ci_low": 0.3814455687563548,
+        "n_resamples": 200,
+        "point": 0.43515903686088
+      },
+      "interpretation": "pipeline defect: even permuted labels depart from 0.5, so the fold or grouping structure is at fault and this condition's C2ST cannot be interpreted at all.",
+      "shuffled": {
+        "max": 0.45482758620689656,
+        "mean": 0.4312005747126436,
+        "repeats": 10
+      },
+      "single_holdout": {
+        "ci_high": 0.5479175385467316,
+        "ci_low": 0.39523968973882906,
+        "n_resamples": 200,
+        "point": 0.47739775173403487
+      }
+    }
+  },
+  "experiment": "E4_fingerprint_v2",
+  "margins": [
+    0.025,
+    0.05,
+    0.075
+  ],
+  "n_natural": 232,
+  "scale": "D = 2*|AUC-0.5|; equivalence requires the upper bound below delta"
+}

@@ -1,0 +1,20 @@
+# Held-out fingerprint probe (G-4 go/no-go) and, via the same traces, the E5
+# transfer gap. Test slice, query-disjoint from E3.
+experiment_id: E4_fingerprint_v2
+stage: E4
+runtime: server
+partition: test
+max_examples: 300
+top_k: 5
+answer_top_k: 2
+natural_examples: 800
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5
+hotpot:
+  train: 500
+  validation: 200
+  test: 800
+  reserve: 200

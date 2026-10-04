@@ -1,0 +1,27 @@
+[project]
+name = "mirage-rag"
+version = "1.0.0"
+description = "Validity audits for injected-failure benchmarks on a real agentic RAG pipeline"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.11"
+dependencies = [
+  "accelerate>=0.34", "datasets>=3.0", "faiss-cpu>=1.8", "numpy>=1.26",
+  "pydantic>=2.8", "pyyaml>=6.0", "scikit-learn>=1.5", "scipy>=1.11",
+  "matplotlib>=3.8", "sentence-transformers>=3.0", "torch>=2.3", "transformers>=4.45",
+  "bitsandbytes>=0.43; platform_system == 'Linux'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mirage*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100

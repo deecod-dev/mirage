@@ -1,0 +1,23 @@
+experiment_id: E4_2wiki_v1
+stage: E4
+runtime: server
+partition: test
+dataset_name: framolfese/2WikiMultihopQA
+dataset_config: default
+device: auto
+seed: 20260823
+max_examples: 300
+natural_examples: 1000
+top_k: 5
+answer_top_k: 2
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+injector_families: [query_retrieval, source_degradation]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5
+hotpot:
+  train: 500
+  validation: 200
+  test: 1000
+  reserve: 200

@@ -1,0 +1,99 @@
+{
+  "analysis": "external_baseline_comparison",
+  "by_condition": {
+    "T0:grounding": {
+      "judge": {
+        "auroc_probed": 0.9556428319537932,
+        "auroc_probed_sd": 0.004029996510696456,
+        "auroc_unsupervised": 0.9560991666666667
+      }
+    },
+    "T0:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.6505301167420369,
+        "auroc_probed_sd": 0.0227136985290322,
+        "auroc_unsupervised": 0.64557125
+      }
+    },
+    "T0:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.5444697808909048,
+        "auroc_probed_sd": 0.009865594232079533,
+        "auroc_unsupervised": 0.5448270833333333
+      }
+    },
+    "T0:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.4949801585437097,
+        "auroc_probed_sd": 0.014100367111067675,
+        "auroc_unsupervised": 0.5108220833333332
+      }
+    },
+    "T1:grounding": {
+      "judge": {
+        "auroc_probed": 0.7743132606949417,
+        "auroc_probed_sd": 0.012772942149157852,
+        "auroc_unsupervised": 0.77542
+      }
+    },
+    "T1:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.6590822722652109,
+        "auroc_probed_sd": 0.013527179775459766,
+        "auroc_unsupervised": 0.6578620833333333
+      }
+    },
+    "T1:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.8113626732680782,
+        "auroc_probed_sd": 0.01623652546042397,
+        "auroc_unsupervised": 0.8127579166666667
+      }
+    },
+    "T1:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.4969558253412431,
+        "auroc_probed_sd": 0.01334720976803547,
+        "auroc_unsupervised": 0.5081958333333334
+      }
+    },
+    "T2:grounding": {
+      "judge": {
+        "auroc_probed": 0.6914616616543799,
+        "auroc_probed_sd": 0.013116818311576114,
+        "auroc_unsupervised": 0.6899920833333334
+      }
+    },
+    "T2:query_retrieval": {
+      "judge": {
+        "auroc_probed": 0.5404882393949125,
+        "auroc_probed_sd": 0.00996178470167306,
+        "auroc_unsupervised": 0.5379445833333334
+      }
+    },
+    "T2:source_degradation": {
+      "judge": {
+        "auroc_probed": 0.6299744711430122,
+        "auroc_probed_sd": 0.016882069440570278,
+        "auroc_unsupervised": 0.6273070833333333
+      }
+    },
+    "T2:tool_invocation": {
+      "judge": {
+        "auroc_probed": 0.4896669780701539,
+        "auroc_probed_sd": 0.007638073990272039,
+        "auroc_unsupervised": 0.5013895833333333
+      }
+    }
+  },
+  "device": "cpu",
+  "experiment": "E4_fingerprint_v2",
+  "n_queries": 800,
+  "n_traces": 18800,
+  "note": "'nli' is the SelfCheckGPT-NLI scoring function applied to (evidence, answer); it is NOT SelfCheckGPT, which needs sampled generations this pipeline does not produce.",
+  "repeats": 25,
+  "seconds_per_trace": {
+    "judge": 0.19396653236504247
+  },
+  "timing_comparable": false
+}

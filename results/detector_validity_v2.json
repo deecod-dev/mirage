@@ -1,0 +1,1303 @@
+{
+  "analysis": "detector_validity",
+  "by_condition": {
+    "T0:grounding": {
+      "all_features": {
+        "ci_high": 0.999959424293592,
+        "ci_low": 0.9988753057649934,
+        "n_resamples": 1000,
+        "point": 0.9995691666666666
+      },
+      "decoupled": {
+        "ci_high": 0.49703962125809065,
+        "ci_low": 0.4442959299473249,
+        "n_resamples": 1000,
+        "point": 0.4694333333333333
+      },
+      "judge": {
+        "ci_high": 0.9638904959725875,
+        "ci_low": 0.9431144613486843,
+        "n_resamples": 1000,
+        "point": 0.9537129166666667
+      },
+      "nli": {
+        "ci_high": 0.5950073541164751,
+        "ci_low": 0.5444732350715106,
+        "n_resamples": 1000,
+        "point": 0.57012
+      },
+      "nli-large": {
+        "ci_high": 0.8150963486046068,
+        "ci_low": 0.7762837808794182,
+        "n_resamples": 1000,
+        "point": 0.7953945833333333
+      },
+      "semantic_only": {
+        "ci_high": 0.9999648980302059,
+        "ci_low": 0.9986109240693533,
+        "n_resamples": 1000,
+        "point": 0.9994825
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5019475110375726,
+        "ci_low": 0.45033068352663236,
+        "n_resamples": 1000,
+        "point": 0.4764429166666667
+      }
+    },
+    "T0:query_retrieval": {
+      "all_features": {
+        "ci_high": 0.7817723721590909,
+        "ci_low": 0.7151456980001162,
+        "n_resamples": 1000,
+        "point": 0.7475375000000001
+      },
+      "decoupled": {
+        "ci_high": 0.7829777704262627,
+        "ci_low": 0.7148600406762989,
+        "n_resamples": 1000,
+        "point": 0.7483374999999999
+      },
+      "judge": {
+        "ci_high": 0.6663089087073264,
+        "ci_low": 0.6028627481244331,
+        "n_resamples": 1000,
+        "point": 0.6352604166666667
+      },
+      "nli": {
+        "ci_high": 0.5064605786339995,
+        "ci_low": 0.4431595769431209,
+        "n_resamples": 1000,
+        "point": 0.4750791666666667
+      },
+      "nli-large": {
+        "ci_high": 0.5291281974045791,
+        "ci_low": 0.46484253611580184,
+        "n_resamples": 1000,
+        "point": 0.4970083333333333
+      },
+      "semantic_only": {
+        "ci_high": 0.75312929814424,
+        "ci_low": 0.6881512613300037,
+        "n_resamples": 1000,
+        "point": 0.7205166666666667
+      },
+      "trivial_baselines": {
+        "ci_high": 0.7318508207873202,
+        "ci_low": 0.6646560779283467,
+        "n_resamples": 1000,
+        "point": 0.6976104166666666
+      }
+    },
+    "T0:source_degradation": {
+      "all_features": {
+        "ci_high": 0.700566866949025,
+        "ci_low": 0.6502010866516391,
+        "n_resamples": 1000,
+        "point": 0.6754833333333333
+      },
+      "decoupled": {
+        "ci_high": 0.6943675945723684,
+        "ci_low": 0.6422654498914719,
+        "n_resamples": 1000,
+        "point": 0.6673625000000001
+      },
+      "judge": {
+        "ci_high": 0.567652434693736,
+        "ci_low": 0.5095071604899782,
+        "n_resamples": 1000,
+        "point": 0.5377337500000001
+      },
+      "nli": {
+        "ci_high": 0.5876521873220075,
+        "ci_low": 0.5402391838937837,
+        "n_resamples": 1000,
+        "point": 0.5636083333333334
+      },
+      "nli-large": {
+        "ci_high": 0.5523602296163563,
+        "ci_low": 0.49411668595679015,
+        "n_resamples": 1000,
+        "point": 0.52218875
+      },
+      "semantic_only": {
+        "ci_high": 0.7038942431950763,
+        "ci_low": 0.6521648031949447,
+        "n_resamples": 1000,
+        "point": 0.6792416666666666
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5417083985610374,
+        "ci_low": 0.49039838652595175,
+        "n_resamples": 1000,
+        "point": 0.5143312499999999
+      }
+    },
+    "T0:tool_invocation": {
+      "all_features": {
+        "ci_high": 1.0,
+        "ci_low": 0.9999999999999999,
+        "n_resamples": 1000,
+        "point": 1.0
+      },
+      "decoupled": {
+        "ci_high": 0.5001932108274648,
+        "ci_low": 0.44853541327519375,
+        "n_resamples": 1000,
+        "point": 0.47318874999999994
+      },
+      "judge": {
+        "ci_high": 0.513164387836147,
+        "ci_low": 0.4638767252191627,
+        "n_resamples": 1000,
+        "point": 0.4886075
+      },
+      "nli": {
+        "ci_high": 0.5034093998561516,
+        "ci_low": 0.4488008221550036,
+        "n_resamples": 1000,
+        "point": 0.4777275
+      },
+      "nli-large": {
+        "ci_high": 0.5550296187592684,
+        "ci_low": 0.49926822771722323,
+        "n_resamples": 1000,
+        "point": 0.5273304166666666
+      },
+      "semantic_only": {
+        "ci_high": 0.492226928285542,
+        "ci_low": 0.4390564472439942,
+        "n_resamples": 1000,
+        "point": 0.4655545833333334
+      },
+      "trivial_baselines": {
+        "ci_high": 1.0,
+        "ci_low": 0.9999999999999999,
+        "n_resamples": 1000,
+        "point": 1.0
+      }
+    },
+    "T1:grounding": {
+      "all_features": {
+        "ci_high": 0.634500084782512,
+        "ci_low": 0.5828439381954538,
+        "n_resamples": 1000,
+        "point": 0.6080508333333333
+      },
+      "decoupled": {
+        "ci_high": 0.5005788838206092,
+        "ci_low": 0.44770947925958965,
+        "n_resamples": 1000,
+        "point": 0.47355499999999995
+      },
+      "judge": {
+        "ci_high": 0.7922691364349174,
+        "ci_low": 0.7513038693969628,
+        "n_resamples": 1000,
+        "point": 0.7719379166666667
+      },
+      "nli": {
+        "ci_high": 0.5849053290619842,
+        "ci_low": 0.5331611775891899,
+        "n_resamples": 1000,
+        "point": 0.5583175
+      },
+      "nli-large": {
+        "ci_high": 0.7735603216973341,
+        "ci_low": 0.7229770158201827,
+        "n_resamples": 1000,
+        "point": 0.7480595833333333
+      },
+      "semantic_only": {
+        "ci_high": 0.6365987847222222,
+        "ci_low": 0.5858719791329666,
+        "n_resamples": 1000,
+        "point": 0.6102749999999999
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5426985432919235,
+        "ci_low": 0.49105036186573126,
+        "n_resamples": 1000,
+        "point": 0.5158420833333334
+      }
+    },
+    "T1:query_retrieval": {
+      "all_features": {
+        "ci_high": 0.8796759196820175,
+        "ci_low": 0.8500883915865919,
+        "n_resamples": 1000,
+        "point": 0.8643804166666667
+      },
+      "decoupled": {
+        "ci_high": 0.8791123141559255,
+        "ci_low": 0.8496404786726286,
+        "n_resamples": 1000,
+        "point": 0.8640029166666667
+      },
+      "judge": {
+        "ci_high": 0.6759984586266622,
+        "ci_low": 0.6269606795009706,
+        "n_resamples": 1000,
+        "point": 0.6515641666666667
+      },
+      "nli": {
+        "ci_high": 0.5249481095645001,
+        "ci_low": 0.47682854892274884,
+        "n_resamples": 1000,
+        "point": 0.5005020833333333
+      },
+      "nli-large": {
+        "ci_high": 0.5124163922950424,
+        "ci_low": 0.46491193689749116,
+        "n_resamples": 1000,
+        "point": 0.4886979166666667
+      },
+      "semantic_only": {
+        "ci_high": 0.869583895239094,
+        "ci_low": 0.8371029624711059,
+        "n_resamples": 1000,
+        "point": 0.8527154166666667
+      },
+      "trivial_baselines": {
+        "ci_high": 0.7198431217929686,
+        "ci_low": 0.6775472372491639,
+        "n_resamples": 1000,
+        "point": 0.6985791666666668
+      }
+    },
+    "T1:source_degradation": {
+      "all_features": {
+        "ci_high": 0.9786873929794521,
+        "ci_low": 0.9542585171568627,
+        "n_resamples": 1000,
+        "point": 0.9676895833333333
+      },
+      "decoupled": {
+        "ci_high": 0.9747430523345701,
+        "ci_low": 0.9497468267889829,
+        "n_resamples": 1000,
+        "point": 0.9628187500000001
+      },
+      "judge": {
+        "ci_high": 0.8401172711706103,
+        "ci_low": 0.7760847116982386,
+        "n_resamples": 1000,
+        "point": 0.8082833333333332
+      },
+      "nli": {
+        "ci_high": 0.6418002547669749,
+        "ci_low": 0.5689295759282768,
+        "n_resamples": 1000,
+        "point": 0.6051854166666667
+      },
+      "nli-large": {
+        "ci_high": 0.7939913158222333,
+        "ci_low": 0.7270930864573707,
+        "n_resamples": 1000,
+        "point": 0.7591345833333333
+      },
+      "semantic_only": {
+        "ci_high": 0.9789659774604885,
+        "ci_low": 0.9544580513607548,
+        "n_resamples": 1000,
+        "point": 0.9680104166666667
+      },
+      "trivial_baselines": {
+        "ci_high": 0.6701957576599388,
+        "ci_low": 0.595042720296573,
+        "n_resamples": 1000,
+        "point": 0.6326312500000001
+      }
+    },
+    "T1:tool_invocation": {
+      "all_features": {
+        "ci_high": 0.9931951166615666,
+        "ci_low": 0.9862022568993506,
+        "n_resamples": 1000,
+        "point": 0.9898091666666666
+      },
+      "decoupled": {
+        "ci_high": 0.5224885719518858,
+        "ci_low": 0.46876868019926027,
+        "n_resamples": 1000,
+        "point": 0.49477874999999993
+      },
+      "judge": {
+        "ci_high": 0.520933365144637,
+        "ci_low": 0.46569174215991255,
+        "n_resamples": 1000,
+        "point": 0.4940154166666667
+      },
+      "nli": {
+        "ci_high": 0.5025976410048285,
+        "ci_low": 0.4508293671558853,
+        "n_resamples": 1000,
+        "point": 0.47700208333333327
+      },
+      "nli-large": {
+        "ci_high": 0.5607009144141389,
+        "ci_low": 0.5083881083993881,
+        "n_resamples": 1000,
+        "point": 0.5356566666666667
+      },
+      "semantic_only": {
+        "ci_high": 0.9932158337416924,
+        "ci_low": 0.9861061407926012,
+        "n_resamples": 1000,
+        "point": 0.9898141666666667
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5889443704656994,
+        "ci_low": 0.5338605679961379,
+        "n_resamples": 1000,
+        "point": 0.5619175000000001
+      }
+    },
+    "T2:grounding": {
+      "all_features": {
+        "ci_high": 0.5767350416648734,
+        "ci_low": 0.5254518795861775,
+        "n_resamples": 1000,
+        "point": 0.5511733333333333
+      },
+      "decoupled": {
+        "ci_high": 0.5095015465955574,
+        "ci_low": 0.4587821737903125,
+        "n_resamples": 1000,
+        "point": 0.4834041666666667
+      },
+      "judge": {
+        "ci_high": 0.7158596436103511,
+        "ci_low": 0.6676989583333334,
+        "n_resamples": 1000,
+        "point": 0.6911233333333334
+      },
+      "nli": {
+        "ci_high": 0.5830771033604731,
+        "ci_low": 0.5326155676102312,
+        "n_resamples": 1000,
+        "point": 0.5574654166666667
+      },
+      "nli-large": {
+        "ci_high": 0.7254858186470001,
+        "ci_low": 0.6737057963006049,
+        "n_resamples": 1000,
+        "point": 0.6996533333333332
+      },
+      "semantic_only": {
+        "ci_high": 0.5740379583333333,
+        "ci_low": 0.5222981631564717,
+        "n_resamples": 1000,
+        "point": 0.5476908333333335
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5465125576062263,
+        "ci_low": 0.4942574665644647,
+        "n_resamples": 1000,
+        "point": 0.5196416666666667
+      }
+    },
+    "T2:query_retrieval": {
+      "all_features": {
+        "ci_high": 0.6018937124001077,
+        "ci_low": 0.5484143220338983,
+        "n_resamples": 1000,
+        "point": 0.57511
+      },
+      "decoupled": {
+        "ci_high": 0.6030538119052019,
+        "ci_low": 0.549556555944056,
+        "n_resamples": 1000,
+        "point": 0.5763408333333333
+      },
+      "judge": {
+        "ci_high": 0.5526627628259041,
+        "ci_low": 0.5002523008403622,
+        "n_resamples": 1000,
+        "point": 0.5259966666666667
+      },
+      "nli": {
+        "ci_high": 0.5008307344276094,
+        "ci_low": 0.4497041932802928,
+        "n_resamples": 1000,
+        "point": 0.4751595833333334
+      },
+      "nli-large": {
+        "ci_high": 0.5421445910788498,
+        "ci_low": 0.4871274407348041,
+        "n_resamples": 1000,
+        "point": 0.5158225000000001
+      },
+      "semantic_only": {
+        "ci_high": 0.6014319860607822,
+        "ci_low": 0.5488802292082977,
+        "n_resamples": 1000,
+        "point": 0.5755916666666667
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5565763466282895,
+        "ci_low": 0.5025958479088127,
+        "n_resamples": 1000,
+        "point": 0.5276404166666667
+      }
+    },
+    "T2:source_degradation": {
+      "all_features": {
+        "ci_high": 0.8103544411439428,
+        "ci_low": 0.7535673395276973,
+        "n_resamples": 1000,
+        "point": 0.7819145833333334
+      },
+      "decoupled": {
+        "ci_high": 0.7938677601195732,
+        "ci_low": 0.7335113445048039,
+        "n_resamples": 1000,
+        "point": 0.7626604166666667
+      },
+      "judge": {
+        "ci_high": 0.6550877917590991,
+        "ci_low": 0.582617087435149,
+        "n_resamples": 1000,
+        "point": 0.6159779166666667
+      },
+      "nli": {
+        "ci_high": 0.5711174377618434,
+        "ci_low": 0.5064587451159761,
+        "n_resamples": 1000,
+        "point": 0.5381970833333334
+      },
+      "nli-large": {
+        "ci_high": 0.6532553744740365,
+        "ci_low": 0.5842579667762403,
+        "n_resamples": 1000,
+        "point": 0.6183320833333333
+      },
+      "semantic_only": {
+        "ci_high": 0.8105818426724137,
+        "ci_low": 0.7541823685198721,
+        "n_resamples": 1000,
+        "point": 0.7824104166666666
+      },
+      "trivial_baselines": {
+        "ci_high": 0.6039775751127974,
+        "ci_low": 0.541772953693316,
+        "n_resamples": 1000,
+        "point": 0.5727833333333333
+      }
+    },
+    "T2:tool_invocation": {
+      "all_features": {
+        "ci_high": 0.5038172258490295,
+        "ci_low": 0.4503366090130033,
+        "n_resamples": 1000,
+        "point": 0.47597749999999994
+      },
+      "decoupled": {
+        "ci_high": 0.5008097109514592,
+        "ci_low": 0.44662688421384333,
+        "n_resamples": 1000,
+        "point": 0.47226583333333333
+      },
+      "judge": {
+        "ci_high": 0.5135039000157933,
+        "ci_low": 0.4619182488029234,
+        "n_resamples": 1000,
+        "point": 0.4865625
+      },
+      "nli": {
+        "ci_high": 0.5087984026598755,
+        "ci_low": 0.4553843551255069,
+        "n_resamples": 1000,
+        "point": 0.48247833333333334
+      },
+      "nli-large": {
+        "ci_high": 0.5167597132303112,
+        "ci_low": 0.4654518964645834,
+        "n_resamples": 1000,
+        "point": 0.49085
+      },
+      "semantic_only": {
+        "ci_high": 0.5008819893533123,
+        "ci_low": 0.447615709851343,
+        "n_resamples": 1000,
+        "point": 0.4737733333333333
+      },
+      "trivial_baselines": {
+        "ci_high": 0.5418956824235308,
+        "ci_low": 0.49013193729768945,
+        "n_resamples": 1000,
+        "point": 0.5164354166666666
+      }
+    }
+  },
+  "detectors": [
+    "decoupled",
+    "all_features",
+    "semantic_only",
+    "trivial_baselines",
+    "nli",
+    "nli-large",
+    "judge"
+  ],
+  "experiment": "E4_fingerprint_v2",
+  "natural_detection": {
+    "all_features": {
+      "ci_high": 0.8321384139517817,
+      "ci_low": 0.7621529676425957,
+      "n_resamples": 1000,
+      "point": 0.7964045046138903
+    },
+    "decoupled": {
+      "ci_high": 0.7714241387839219,
+      "ci_low": 0.6968989332576794,
+      "n_resamples": 1000,
+      "point": 0.7338134409907722
+    },
+    "judge": {
+      "ci_high": 0.7474196514986181,
+      "ci_low": 0.6611321824226055,
+      "n_resamples": 1000,
+      "point": 0.7046730815930063
+    },
+    "nli": {
+      "ci_high": 0.5630187475075241,
+      "ci_low": 0.4702756509833557,
+      "n_resamples": 1000,
+      "point": 0.5179547110247693
+    },
+    "nli-large": {
+      "ci_high": 0.7364339696135525,
+      "ci_low": 0.649705110374016,
+      "n_resamples": 1000,
+      "point": 0.6933166889266633
+    },
+    "semantic_only": {
+      "ci_high": 0.8274650492581729,
+      "ci_low": 0.7566683486106666,
+      "n_resamples": 1000,
+      "point": 0.7919651529868869
+    },
+    "trivial_baselines": {
+      "ci_high": 0.6598259309599035,
+      "ci_low": 0.5716136426765079,
+      "n_resamples": 1000,
+      "point": 0.6149109094220495
+    }
+  },
+  "primary_arm": "decoupled",
+  "ranking_stability": {
+    "T0": {
+      "kendall_tau": 0.6190476190476191,
+      "natural_best": "all_features",
+      "natural_ranking": [
+        "all_features",
+        "semantic_only",
+        "decoupled",
+        "judge",
+        "nli-large",
+        "trivial_baselines",
+        "nli"
+      ],
+      "p_value": 0.06904761904761905,
+      "picks_same_detector": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": [
+        "all_features",
+        "semantic_only",
+        "trivial_baselines",
+        "judge",
+        "decoupled",
+        "nli-large",
+        "nli"
+      ]
+    },
+    "T1": {
+      "kendall_tau": 1.0,
+      "natural_best": "all_features",
+      "natural_ranking": [
+        "all_features",
+        "semantic_only",
+        "decoupled",
+        "judge",
+        "nli-large",
+        "trivial_baselines",
+        "nli"
+      ],
+      "p_value": 0.0003968253968253968,
+      "picks_same_detector": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": [
+        "all_features",
+        "semantic_only",
+        "decoupled",
+        "judge",
+        "nli-large",
+        "trivial_baselines",
+        "nli"
+      ]
+    },
+    "T2": {
+      "kendall_tau": 0.7142857142857143,
+      "natural_best": "all_features",
+      "natural_ranking": [
+        "all_features",
+        "semantic_only",
+        "decoupled",
+        "judge",
+        "nli-large",
+        "trivial_baselines",
+        "nli"
+      ],
+      "p_value": 0.03015873015873016,
+      "picks_same_detector": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": [
+        "all_features",
+        "semantic_only",
+        "nli-large",
+        "judge",
+        "decoupled",
+        "trivial_baselines",
+        "nli"
+      ]
+    }
+  },
+  "union": {
+    "T0:grounding": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.9693001716792733,
+          "ci_low": 0.9500028467989412,
+          "n_resamples": 1000,
+          "point": 0.96007125
+        },
+        "paired": {
+          "ci_high": 0.011759537392137972,
+          "ci_low": 0.0009595313027159104,
+          "delta": 0.006358333333333355,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "judge"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.5605276862970533,
+          "ci_low": 0.5081630578609457,
+          "n_resamples": 1000,
+          "point": 0.5341783333333334
+        },
+        "paired": {
+          "ci_high": -0.017149935866350604,
+          "ci_low": -0.055003313635730654,
+          "delta": -0.03594166666666654,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.6877849390230776,
+          "ci_low": 0.6371774903749673,
+          "n_resamples": 1000,
+          "point": 0.6604491666666666
+        },
+        "paired": {
+          "ci_high": -0.11326632720553811,
+          "ci_low": -0.15611523294368912,
+          "delta": -0.1349454166666667,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli-large"
+      }
+    },
+    "T0:query_retrieval": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.7819447090437361,
+          "ci_low": 0.7141959215111338,
+          "n_resamples": 1000,
+          "point": 0.7473474999999999
+        },
+        "paired": {
+          "ci_high": 0.002495496812623504,
+          "ci_low": -0.004384380874060209,
+          "delta": -0.0009899999999999354,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.7785914637800202,
+          "ci_low": 0.7120864963842801,
+          "n_resamples": 1000,
+          "point": 0.7443000000000001
+        },
+        "paired": {
+          "ci_high": -0.0015997727272727721,
+          "ci_low": -0.006551320096442564,
+          "delta": -0.004037499999999805,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.78168658960341,
+          "ci_low": 0.7131701426677313,
+          "n_resamples": 1000,
+          "point": 0.7466625
+        },
+        "paired": {
+          "ci_high": 0.002406815593473074,
+          "ci_low": -0.006571880650297993,
+          "delta": -0.001674999999999871,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T0:source_degradation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.6966030625169829,
+          "ci_low": 0.6434299389075923,
+          "n_resamples": 1000,
+          "point": 0.669475
+        },
+        "paired": {
+          "ci_high": 0.007988204414191454,
+          "ci_low": -0.0035334035958578145,
+          "delta": 0.0021124999999999616,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.7076651895969245,
+          "ci_low": 0.6555896321874546,
+          "n_resamples": 1000,
+          "point": 0.6814416666666667
+        },
+        "paired": {
+          "ci_high": 0.026180580028403084,
+          "ci_low": 0.0018748034591195672,
+          "delta": 0.014079166666666643,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.6945240479233227,
+          "ci_low": 0.6420783156037729,
+          "n_resamples": 1000,
+          "point": 0.6673858333333333
+        },
+        "paired": {
+          "ci_high": 0.0011374170275029404,
+          "ci_low": -0.0010843942401828537,
+          "delta": 2.333333333326415e-05,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T0:tool_invocation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.4987590474656357,
+          "ci_low": 0.4466988560030485,
+          "n_resamples": 1000,
+          "point": 0.4720783333333334
+        },
+        "paired": {
+          "ci_high": 0.017656543174342083,
+          "ci_low": -0.049772656630746745,
+          "delta": -0.016529166666666595,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "judge"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.4944344966458805,
+          "ci_low": 0.44232599223984687,
+          "n_resamples": 1000,
+          "point": 0.46862
+        },
+        "paired": {
+          "ci_high": 0.02443921777950315,
+          "ci_low": -0.039643415189731045,
+          "delta": -0.009107500000000046,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "nli"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.501762428343949,
+          "ci_low": 0.45015283552169505,
+          "n_resamples": 1000,
+          "point": 0.4751416666666667
+        },
+        "paired": {
+          "ci_high": -0.01258726947254482,
+          "ci_low": -0.0899349420685493,
+          "delta": -0.052188749999999895,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli-large"
+      }
+    },
+    "T1:grounding": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.7958785833446435,
+          "ci_low": 0.7509372293867237,
+          "n_resamples": 1000,
+          "point": 0.7724483333333334
+        },
+        "paired": {
+          "ci_high": 0.015862149645618672,
+          "ci_low": -0.014276770443768768,
+          "delta": 0.0005104166666667354,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "judge"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.549079166403137,
+          "ci_low": 0.4993068846598295,
+          "n_resamples": 1000,
+          "point": 0.5246158333333333
+        },
+        "paired": {
+          "ci_high": -0.014271800822479227,
+          "ci_low": -0.052546955645378035,
+          "delta": -0.03370166666666674,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.7328281217911694,
+          "ci_low": 0.6786424953893443,
+          "n_resamples": 1000,
+          "point": 0.7069254166666665
+        },
+        "paired": {
+          "ci_high": -0.018556933241200363,
+          "ci_low": -0.061487242424242326,
+          "delta": -0.041134166666666805,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli-large"
+      }
+    },
+    "T1:query_retrieval": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.8793132542523817,
+          "ci_low": 0.8499793878931781,
+          "n_resamples": 1000,
+          "point": 0.8641733333333335
+        },
+        "paired": {
+          "ci_high": 0.001630662034501731,
+          "ci_low": -0.0013205434086330625,
+          "delta": 0.0001704166666667284,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.8790891161081966,
+          "ci_low": 0.8496971280791937,
+          "n_resamples": 1000,
+          "point": 0.8639641666666666
+        },
+        "paired": {
+          "ci_high": 0.00033796858144551913,
+          "ci_low": -0.00044802807882957373,
+          "delta": -3.8750000000087326e-05,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.8791551433049708,
+          "ci_low": 0.8497058891239422,
+          "n_resamples": 1000,
+          "point": 0.8640350000000001
+        },
+        "paired": {
+          "ci_high": 0.0012461534123289818,
+          "ci_low": -0.0013203761025688294,
+          "delta": 3.2083333333376984e-05,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T1:source_degradation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.9773620919783753,
+          "ci_low": 0.9541112637052517,
+          "n_resamples": 1000,
+          "point": 0.9664179166666668
+        },
+        "paired": {
+          "ci_high": 0.007258967358214801,
+          "ci_low": -4.505420253439473e-05,
+          "delta": 0.003599166666666709,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.9746645157849829,
+          "ci_low": 0.949051979680726,
+          "n_resamples": 1000,
+          "point": 0.9628270833333334
+        },
+        "paired": {
+          "ci_high": 0.0010435984052712672,
+          "ci_low": -0.0011301363393928176,
+          "delta": 8.333333333387927e-06,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.9756006961259079,
+          "ci_low": 0.9511091490192872,
+          "n_resamples": 1000,
+          "point": 0.96459375
+        },
+        "paired": {
+          "ci_high": 0.004242486603352929,
+          "ci_low": -0.00041037585392097444,
+          "delta": 0.001774999999999971,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T1:tool_invocation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.5220963935113518,
+          "ci_low": 0.46960035409553824,
+          "n_resamples": 1000,
+          "point": 0.49495208333333335
+        },
+        "paired": {
+          "ci_high": 0.004232160453706839,
+          "ci_low": -0.004165924578896603,
+          "delta": 0.00017333333333341416,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.5178311208520595,
+          "ci_low": 0.4629954866362605,
+          "n_resamples": 1000,
+          "point": 0.4898954166666667
+        },
+        "paired": {
+          "ci_high": 0.000573434461997411,
+          "ci_low": -0.010303182054373052,
+          "delta": -0.00488333333333324,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.5428351308892501,
+          "ci_low": 0.4888941951157141,
+          "n_resamples": 1000,
+          "point": 0.5145833333333334
+        },
+        "paired": {
+          "ci_high": 0.015254455017301024,
+          "ci_low": -0.053648918016801724,
+          "delta": -0.021073333333333277,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "nli-large"
+      }
+    },
+    "T2:grounding": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.7093445475061199,
+          "ci_low": 0.657706712880697,
+          "n_resamples": 1000,
+          "point": 0.6824579166666667
+        },
+        "paired": {
+          "ci_high": 0.008882162384969267,
+          "ci_low": -0.025023599967384014,
+          "delta": -0.008665416666666759,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "judge"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.5494882562239751,
+          "ci_low": 0.4979300592003557,
+          "n_resamples": 1000,
+          "point": 0.52388625
+        },
+        "paired": {
+          "ci_high": -0.014416264311668621,
+          "ci_low": -0.053539784644194795,
+          "delta": -0.033579166666666715,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.7005401616734838,
+          "ci_low": 0.6439705966765475,
+          "n_resamples": 1000,
+          "point": 0.6720758333333332
+        },
+        "paired": {
+          "ci_high": -0.004636675986841974,
+          "ci_low": -0.04982118125062564,
+          "delta": -0.027577500000000033,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": true
+        },
+        "vs": "nli-large"
+      }
+    },
+    "T2:query_retrieval": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.6019298194324778,
+          "ci_low": 0.5483095576298701,
+          "n_resamples": 1000,
+          "point": 0.5748341666666668
+        },
+        "paired": {
+          "ci_high": 0.0034554147665580262,
+          "ci_low": -0.006104315175565009,
+          "delta": -0.0015066666666665451,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.5996127071236369,
+          "ci_low": 0.5458350779600699,
+          "n_resamples": 1000,
+          "point": 0.5730133333333333
+        },
+        "paired": {
+          "ci_high": 0.0004433001077586618,
+          "ci_low": -0.00715695756991325,
+          "delta": -0.0033275000000000388,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.6019152659864688,
+          "ci_low": 0.5489640979430987,
+          "n_resamples": 1000,
+          "point": 0.575415
+        },
+        "paired": {
+          "ci_high": 0.0005698883836296072,
+          "ci_low": -0.0023623922413793406,
+          "delta": -0.0009258333333332924,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T2:source_degradation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.803066828978213,
+          "ci_low": 0.7416775262843662,
+          "n_resamples": 1000,
+          "point": 0.7720904166666668
+        },
+        "paired": {
+          "ci_high": 0.01970013796603916,
+          "ci_low": -0.0003516234448288802,
+          "delta": 0.00943000000000005,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.7937078122445365,
+          "ci_low": 0.7331170030970243,
+          "n_resamples": 1000,
+          "point": 0.7625345833333333
+        },
+        "paired": {
+          "ci_high": 0.0034858985187109465,
+          "ci_low": -0.003915569662545781,
+          "delta": -0.00012583333333338054,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.7969557687385983,
+          "ci_low": 0.7369887709030101,
+          "n_resamples": 1000,
+          "point": 0.7660270833333334
+        },
+        "paired": {
+          "ci_high": 0.010281684027777719,
+          "ci_low": -0.0035381353008971466,
+          "delta": 0.003366666666666629,
+          "direction": "gain",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "decoupled"
+      }
+    },
+    "T2:tool_invocation": {
+      "decoupled+judge": {
+        "auroc": {
+          "ci_high": 0.4983836986065121,
+          "ci_low": 0.44552213085009673,
+          "n_resamples": 1000,
+          "point": 0.47099916666666664
+        },
+        "paired": {
+          "ci_high": 0.02005969792577798,
+          "ci_low": -0.05080982151828778,
+          "delta": -0.015563333333333373,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "judge"
+      },
+      "decoupled+nli": {
+        "auroc": {
+          "ci_high": 0.49577912731481477,
+          "ci_low": 0.4440896196056094,
+          "n_resamples": 1000,
+          "point": 0.4693366666666666
+        },
+        "paired": {
+          "ci_high": 0.02395891806879093,
+          "ci_low": -0.04513497107704962,
+          "delta": -0.013141666666666718,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "nli"
+      },
+      "decoupled+nli-large": {
+        "auroc": {
+          "ci_high": 0.49010286899717515,
+          "ci_low": 0.4380538095185659,
+          "n_resamples": 1000,
+          "point": 0.46313708333333337
+        },
+        "paired": {
+          "ci_high": 0.009154944286884096,
+          "ci_low": -0.06452113243571538,
+          "delta": -0.027712916666666643,
+          "direction": "regression",
+          "n_resamples": 1000,
+          "significant": false
+        },
+        "vs": "nli-large"
+      }
+    }
+  }
+}

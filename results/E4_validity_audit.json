@@ -1,0 +1,465 @@
+{
+  "ablations": {
+    "all_features": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS",
+        "AGS",
+        "TRTR_route",
+        "TIHD_health",
+        "token_count",
+        "answer_length"
+      ],
+      "gate_pass": true,
+      "macro_auroc": 0.916753962962963,
+      "macro_auroc_ci": {
+        "ci_high": 0.9214352300925926,
+        "ci_low": 0.9125684861111111,
+        "point": 0.916753962962963
+      },
+      "per_class": {
+        "clean": 0.8538601851851852,
+        "grounding": 0.9993644444444444,
+        "query_retrieval": 0.8496275925925927,
+        "source_degradation": 0.8840946296296296,
+        "tool_invocation": 0.996822962962963
+      }
+    },
+    "coupled_only": {
+      "features": [
+        "AGS",
+        "TIHD_health",
+        "TRTR_route"
+      ],
+      "gate_pass": true,
+      "macro_auroc": 0.8886199259259259,
+      "macro_auroc_ci": {
+        "ci_high": 0.8936158268518518,
+        "ci_low": 0.883743250462963,
+        "point": 0.8886199259259259
+      },
+      "per_class": {
+        "clean": 0.8061388888888888,
+        "grounding": 0.9958311111111111,
+        "query_retrieval": 0.8210314814814814,
+        "source_degradation": 0.8306096296296297,
+        "tool_invocation": 0.9894885185185185
+      }
+    },
+    "minus_AGS": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS",
+        "TRTR_route",
+        "TIHD_health",
+        "token_count",
+        "answer_length"
+      ],
+      "gate_pass": true,
+      "macro_auroc": 0.8020057592592593,
+      "macro_auroc_ci": {
+        "ci_high": 0.8094925768518518,
+        "ci_low": 0.7953447949074074,
+        "point": 0.8020057592592593
+      },
+      "per_class": {
+        "clean": 0.7286393518518518,
+        "grounding": 0.7638872222222222,
+        "query_retrieval": 0.739135,
+        "source_degradation": 0.7836775925925926,
+        "tool_invocation": 0.9946896296296296
+      }
+    },
+    "minus_all_coupled": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS",
+        "token_count",
+        "answer_length"
+      ],
+      "gate_pass": false,
+      "macro_auroc": 0.6494018148148147,
+      "macro_auroc_ci": {
+        "ci_high": 0.6586227680555555,
+        "ci_low": 0.6406435365740741,
+        "point": 0.6494018148148147
+      },
+      "per_class": {
+        "clean": 0.6106027777777777,
+        "grounding": 0.6308322222222222,
+        "query_retrieval": 0.6582077777777777,
+        "source_degradation": 0.7200740740740741,
+        "tool_invocation": 0.6272922222222221
+      }
+    },
+    "minus_coupled_and_trivial": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS"
+      ],
+      "gate_pass": false,
+      "macro_auroc": 0.6338879074074073,
+      "macro_auroc_ci": {
+        "ci_high": 0.6428542851851852,
+        "ci_low": 0.6246011208333333,
+        "point": 0.6338879074074073
+      },
+      "per_class": {
+        "clean": 0.6010541666666667,
+        "grounding": 0.621261111111111,
+        "query_retrieval": 0.6169875925925925,
+        "source_degradation": 0.7088727777777777,
+        "tool_invocation": 0.6212638888888888
+      }
+    },
+    "minus_tool_coupling": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS",
+        "AGS",
+        "token_count",
+        "answer_length"
+      ],
+      "gate_pass": true,
+      "macro_auroc": 0.8197902962962964,
+      "macro_auroc_ci": {
+        "ci_high": 0.8264135611111111,
+        "ci_low": 0.8136614564814815,
+        "point": 0.8197902962962964
+      },
+      "per_class": {
+        "clean": 0.7400981481481481,
+        "grounding": 0.9995466666666667,
+        "query_retrieval": 0.7599335185185185,
+        "source_degradation": 0.8187051851851852,
+        "tool_invocation": 0.7806679629629629
+      }
+    },
+    "novel_metrics_only": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SEO",
+        "SRS",
+        "AGS",
+        "TIHD_health"
+      ],
+      "gate_pass": true,
+      "macro_auroc": 0.8692512222222224,
+      "macro_auroc_ci": {
+        "ci_high": 0.8748275314814815,
+        "ci_low": 0.8643806560185185,
+        "point": 0.8692512222222224
+      },
+      "per_class": {
+        "clean": 0.8018342592592593,
+        "grounding": 0.9993655555555556,
+        "query_retrieval": 0.791262962962963,
+        "source_degradation": 0.8512718518518517,
+        "tool_invocation": 0.9025214814814815
+      }
+    },
+    "trivial_baselines_only": {
+      "features": [
+        "token_count",
+        "answer_length",
+        "TRTR_route"
+      ],
+      "gate_pass": false,
+      "macro_auroc": 0.6315222592592592,
+      "macro_auroc_ci": {
+        "ci_high": 0.6401187037037037,
+        "ci_low": 0.6230001893518519,
+        "point": 0.6315222592592592
+      },
+      "per_class": {
+        "clean": 0.5978064814814815,
+        "grounding": 0.614735,
+        "query_retrieval": 0.6742246296296296,
+        "source_degradation": 0.5721277777777777,
+        "tool_invocation": 0.6987174074074074
+      }
+    }
+  },
+  "analysis": "probe_validity_audit",
+  "bootstrap_repeats": 1000,
+  "coupled_features": [
+    "AGS",
+    "TIHD_health",
+    "TRTR_route"
+  ],
+  "coupling_share_of_above_chance_signal": 0.6415107519251302,
+  "determinism": {
+    "test": {
+      "byte_identical_groups": 3900,
+      "max_across_seed_spread": 0.0,
+      "n_traces": 39000,
+      "n_unique_conditions": 3900,
+      "n_unique_queries": 300,
+      "replicated_groups": 3900,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71,
+        89,
+        101,
+        113,
+        127,
+        139
+      ],
+      "verdict": "seeds are duplicates — no stochasticity in the pipeline"
+    },
+    "train": {
+      "byte_identical_groups": 1800,
+      "max_across_seed_spread": 0.0,
+      "n_traces": 9000,
+      "n_unique_conditions": 1800,
+      "n_unique_queries": 200,
+      "replicated_groups": 1800,
+      "seeds": [
+        11,
+        23,
+        37,
+        53,
+        71
+      ],
+      "verdict": "seeds are duplicates — no stochasticity in the pipeline"
+    }
+  },
+  "exact_value_signatures": {
+    "T0:grounding": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T0:query_retrieval": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T0:source_degradation": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T1:grounding": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T1:query_retrieval": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T1:source_degradation": {
+      "QCM": {
+        "share": 0.9966442953020134,
+        "value": 0.0
+      },
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T1:tool_invocation": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T2:grounding": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T2:query_retrieval": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T2:source_degradation": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "T2:tool_invocation": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    },
+    "clean": {
+      "TRTR_route": {
+        "share": 1.0,
+        "value": 0.0
+      }
+    }
+  },
+  "features": [
+    "QCM",
+    "ICRR",
+    "SCR",
+    "CDI_max",
+    "MUT",
+    "IPS",
+    "TCS",
+    "GSA",
+    "SEO",
+    "SRS",
+    "AGS",
+    "TRTR_route",
+    "TIHD_health",
+    "token_count",
+    "answer_length"
+  ],
+  "metric_redundancy": [
+    {
+      "a": "TCS",
+      "b": "SEO",
+      "identical": true,
+      "max_abs_diff": 0.0,
+      "r": 1.0
+    }
+  ],
+  "n_test_deduplicated": 3900,
+  "n_test_rows_on_disk": 39000,
+  "n_train": 9000,
+  "natural_faults": {
+    "max_selected_context_size": 20,
+    "mean_selected_context_size": 10.013333333333334,
+    "n_clean_queries": 300,
+    "no_gold_title_in_selected": 0,
+    "not_all_gold_titles_present": 11,
+    "note": "HotpotQA distractor ships 10 candidate paragraphs per query; a mean selected size at or near 10 means retrieval filters nothing."
+  },
+  "permutation_null": {
+    "max": 0.6327543333333333,
+    "mean": 0.4805528722222223,
+    "repeats": 20
+  },
+  "seed": 11,
+  "single_feature_auroc": {
+    "clean": {
+      "auroc": 0.6835569444444445,
+      "best_feature": "AGS"
+    },
+    "grounding": {
+      "auroc": 0.9959477777777778,
+      "best_feature": "AGS"
+    },
+    "query_retrieval": {
+      "auroc": 0.6969103703703704,
+      "best_feature": "AGS"
+    },
+    "source_degradation": {
+      "auroc": 0.7970562962962964,
+      "best_feature": "QCM"
+    },
+    "tool_invocation": {
+      "auroc": 0.8151438888888888,
+      "best_feature": "TIHD_health"
+    }
+  },
+  "test_experiment": "E4_fingerprint",
+  "tier_collapse": {
+    "grounding": {
+      "collapsed": true,
+      "identical_pairs": {
+        "T0==T1": 300,
+        "T0==T2": 300,
+        "T1==T2": 300
+      },
+      "n_queries": 300
+    },
+    "query_retrieval": {
+      "collapsed": false,
+      "identical_pairs": {
+        "T0==T1": 0,
+        "T0==T2": 0,
+        "T1==T2": 0
+      },
+      "n_queries": 300
+    },
+    "source_degradation": {
+      "collapsed": false,
+      "identical_pairs": {
+        "T0==T1": 0,
+        "T0==T2": 0,
+        "T1==T2": 11
+      },
+      "n_queries": 300
+    },
+    "tool_invocation": {
+      "collapsed": false,
+      "identical_pairs": {
+        "T0==T1": 0,
+        "T0==T2": 0,
+        "T1==T2": 56
+      },
+      "n_queries": 300
+    }
+  },
+  "train_experiment": "E3_positive_control",
+  "trivial_baselines": [
+    "token_count",
+    "answer_length",
+    "TRTR_route"
+  ]
+}

@@ -1,0 +1,258 @@
+{
+  "analysis": "held_out_injector_fingerprint",
+  "arms": {
+    "all_features": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SRS",
+        "AGS",
+        "TRTR_route",
+        "TIHD_health",
+        "token_count",
+        "answer_length"
+      ],
+      "overall": {
+        "ci_high": 0.8009472298590196,
+        "ci_low": 0.788706568158585,
+        "n_resamples": 1000,
+        "point": 0.7948636240079365
+      },
+      "per_class": {
+        "clean": 0.7364817708333333,
+        "grounding": 0.8018901587301587,
+        "query_retrieval": 0.7846298412698414,
+        "source_degradation": 0.7977298412698413,
+        "tool_invocation": 0.8535865079365079
+      },
+      "per_tier": {
+        "T0": {
+          "ci_high": 0.8827100072404367,
+          "ci_low": 0.8697044332386364,
+          "n_resamples": 1000,
+          "point": 0.8764835784313727
+        },
+        "T1": {
+          "ci_high": 0.8815494539171493,
+          "ci_low": 0.8630237761134351,
+          "n_resamples": 1000,
+          "point": 0.8721126286764707
+        },
+        "T2": {
+          "ci_high": 0.5861308119640398,
+          "ci_low": 0.56307045326955,
+          "n_resamples": 1000,
+          "point": 0.5739416789215686
+        }
+      }
+    },
+    "coupled_only": {
+      "features": [
+        "AGS",
+        "TIHD_health",
+        "TRTR_route"
+      ],
+      "overall": {
+        "ci_high": 0.7302392137271201,
+        "ci_low": 0.7196798396567913,
+        "n_resamples": 1000,
+        "point": 0.7247334255952381
+      },
+      "per_class": {
+        "clean": 0.6954387152777779,
+        "grounding": 0.7215228571428571,
+        "query_retrieval": 0.6263914285714286,
+        "source_degradation": 0.7184428571428573,
+        "tool_invocation": 0.8618712698412698
+      },
+      "per_tier": {
+        "T0": {
+          "ci_high": 0.8243575219434892,
+          "ci_low": 0.8116560720386127,
+          "n_resamples": 1000,
+          "point": 0.8180792647058823
+        },
+        "T1": {
+          "ci_high": 0.7317784167829366,
+          "ci_low": 0.7134164861306597,
+          "n_resamples": 1000,
+          "point": 0.7230198897058824
+        },
+        "T2": {
+          "ci_high": 0.5783307060961894,
+          "ci_low": 0.5577008192110877,
+          "n_resamples": 1000,
+          "point": 0.567832506127451
+        }
+      }
+    },
+    "decoupled": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SRS",
+        "token_count",
+        "answer_length"
+      ],
+      "overall": {
+        "ci_high": 0.6641004914472827,
+        "ci_low": 0.6469817745805843,
+        "n_resamples": 1000,
+        "point": 0.6554413075396825
+      },
+      "per_class": {
+        "clean": 0.6143059027777779,
+        "grounding": 0.6101947619047619,
+        "query_retrieval": 0.702247619047619,
+        "source_degradation": 0.7414542857142858,
+        "tool_invocation": 0.6090039682539683
+      },
+      "per_tier": {
+        "T0": {
+          "ci_high": 0.6207596653484112,
+          "ci_low": 0.6018765374569489,
+          "n_resamples": 1000,
+          "point": 0.6115709068627451
+        },
+        "T1": {
+          "ci_high": 0.7574030934291883,
+          "ci_low": 0.7354444695579441,
+          "n_resamples": 1000,
+          "point": 0.7471048529411765
+        },
+        "T2": {
+          "ci_high": 0.5819912226817129,
+          "ci_low": 0.5587208831692522,
+          "n_resamples": 1000,
+          "point": 0.5692920955882352
+        }
+      }
+    },
+    "semantic_only": {
+      "features": [
+        "QCM",
+        "ICRR",
+        "SCR",
+        "CDI_max",
+        "MUT",
+        "IPS",
+        "TCS",
+        "GSA",
+        "SRS",
+        "AGS",
+        "TIHD_health"
+      ],
+      "overall": {
+        "ci_high": 0.7495298583146462,
+        "ci_low": 0.734445295681367,
+        "n_resamples": 1000,
+        "point": 0.7419644910714286
+      },
+      "per_class": {
+        "clean": 0.6882619791666666,
+        "grounding": 0.7742334920634921,
+        "query_retrieval": 0.7372885714285715,
+        "source_degradation": 0.7731234920634921,
+        "tool_invocation": 0.7369149206349206
+      },
+      "per_tier": {
+        "T0": {
+          "ci_high": 0.7472712260206449,
+          "ci_low": 0.7305501823591707,
+          "n_resamples": 1000,
+          "point": 0.7388518382352942
+        },
+        "T1": {
+          "ci_high": 0.8751498605853731,
+          "ci_low": 0.8555851731688711,
+          "n_resamples": 1000,
+          "point": 0.8655417585784313
+        },
+        "T2": {
+          "ci_high": 0.5894635374703688,
+          "ci_low": 0.5670039652029785,
+          "n_resamples": 1000,
+          "point": 0.5778865318627451
+        }
+      }
+    },
+    "trivial_baselines": {
+      "features": [
+        "token_count",
+        "answer_length",
+        "TRTR_route"
+      ],
+      "overall": {
+        "ci_high": 0.632559234984871,
+        "ci_low": 0.6153266685561162,
+        "n_resamples": 1000,
+        "point": 0.6235138442460316
+      },
+      "per_class": {
+        "clean": 0.5858446180555555,
+        "grounding": 0.5820419047619048,
+        "query_retrieval": 0.6560607936507936,
+        "source_degradation": 0.6089074603174602,
+        "tool_invocation": 0.6847144444444444
+      },
+      "per_tier": {
+        "T0": {
+          "ci_high": 0.7310882993137363,
+          "ci_low": 0.7140581463053982,
+          "n_resamples": 1000,
+          "point": 0.7216460416666667
+        },
+        "T1": {
+          "ci_high": 0.6067207983678093,
+          "ci_low": 0.5733019741401197,
+          "n_resamples": 1000,
+          "point": 0.5895858884803922
+        },
+        "T2": {
+          "ci_high": 0.5421093477935899,
+          "ci_low": 0.5168445714956134,
+          "n_resamples": 1000,
+          "point": 0.5292530759803922
+        }
+      }
+    }
+  },
+  "bootstrap_repeats": 1000,
+  "classes": [
+    "clean",
+    "grounding",
+    "query_retrieval",
+    "source_degradation",
+    "tool_invocation"
+  ],
+  "coupling_share_of_above_chance_signal": 0.4728366102714023,
+  "definedness_indicators": true,
+  "gate_arm": "decoupled",
+  "gate_g4": false,
+  "gate_threshold": 0.65,
+  "macro_auroc": 0.7948636240079365,
+  "n_test": 4400,
+  "n_train": 1800,
+  "seed": 11,
+  "test_experiment": "E4_fingerprint_v2",
+  "test_queries": 800,
+  "tiers": [
+    "T0",
+    "T1",
+    "T2"
+  ],
+  "train_experiment": "E3_positive_control_v2",
+  "train_queries": 200
+}

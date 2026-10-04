@@ -1,0 +1,18 @@
+experiment_id: E5_transfer
+stage: E5
+runtime: server
+partition: test
+max_examples: 300
+top_k: 5
+answer_top_k: 2
+natural_examples: 800
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5
+hotpot:
+  train: 500
+  validation: 200
+  test: 800
+  reserve: 200

@@ -1,0 +1,239 @@
+{
+  "analysis": "probe_family_sensitivity",
+  "ecological": {
+    "T0:query_retrieval": {
+      "gbm": {
+        "D": 0.3727435032731603,
+        "D_upper_bound": 0.5061297361634596,
+        "ci_high": 0.7530648680817298,
+        "ci_low": 0.6038434834358262,
+        "n_resamples": 400,
+        "point": 0.6863717516365802
+      },
+      "linear": {
+        "D": 0.4544733187859551,
+        "D_upper_bound": 0.5779408847450902,
+        "ci_high": 0.7889704423725451,
+        "ci_low": 0.6546121801229915,
+        "n_resamples": 400,
+        "point": 0.7272366593929775
+      },
+      "mlp": {
+        "D": 0.32354691529458446,
+        "D_upper_bound": 0.4592838722475696,
+        "ci_high": 0.7296419361237848,
+        "ci_low": 0.5851914302717716,
+        "n_resamples": 400,
+        "point": 0.6617734576472922
+      },
+      "rbf_svm": {
+        "D": 0.24102360642729614,
+        "D_upper_bound": 0.3894762943860346,
+        "ci_high": 0.6947381471930173,
+        "ci_low": 0.5303957548105535,
+        "n_resamples": 400,
+        "point": 0.6205118032136481
+      }
+    },
+    "T0:source_degradation": {
+      "gbm": {
+        "D": 0.20591152549097402,
+        "D_upper_bound": 0.35478079746082103,
+        "ci_high": 0.6773903987304105,
+        "ci_low": 0.5399647887323944,
+        "n_resamples": 400,
+        "point": 0.602955762745487
+      },
+      "linear": {
+        "D": 0.301329101368776,
+        "D_upper_bound": 0.41284467367585775,
+        "ci_high": 0.7064223368379289,
+        "ci_low": 0.618126363816703,
+        "n_resamples": 400,
+        "point": 0.650664550684388
+      },
+      "mlp": {
+        "D": 0.2858559809561594,
+        "D_upper_bound": 0.38171493751239827,
+        "ci_high": 0.6908574687561991,
+        "ci_low": 0.6128521126760563,
+        "n_resamples": 400,
+        "point": 0.6429279904780797
+      },
+      "rbf_svm": {
+        "D": 0.29458440785558415,
+        "D_upper_bound": 0.39547708787938896,
+        "ci_high": 0.38902003570720095,
+        "ci_low": 0.3022614560603055,
+        "n_resamples": 400,
+        "point": 0.3527077960722079
+      }
+    },
+    "T1:query_retrieval": {
+      "gbm": {
+        "D": 0.6067843681809164,
+        "D_upper_bound": 0.699377107716723,
+        "ci_high": 0.8496885538583615,
+        "ci_low": 0.7549092441975799,
+        "n_resamples": 400,
+        "point": 0.8033921840904582
+      },
+      "linear": {
+        "D": 0.6553461614758975,
+        "D_upper_bound": 0.7298095615949218,
+        "ci_high": 0.8649047807974609,
+        "ci_low": 0.7863905971037491,
+        "n_resamples": 400,
+        "point": 0.8276730807379488
+      },
+      "mlp": {
+        "D": 0.5279904780797464,
+        "D_upper_bound": 0.6167070025788535,
+        "ci_high": 0.8083535012894267,
+        "ci_low": 0.7129577464788732,
+        "n_resamples": 400,
+        "point": 0.7639952390398732
+      },
+      "rbf_svm": {
+        "D": 0.5670303511208092,
+        "D_upper_bound": 0.6617585796468954,
+        "ci_high": 0.8308792898234477,
+        "ci_low": 0.7269500099186668,
+        "n_resamples": 400,
+        "point": 0.7835151755604046
+      }
+    },
+    "T1:source_degradation": {
+      "gbm": {
+        "D": 0.5362031342987503,
+        "D_upper_bound": 0.6889704423725451,
+        "ci_high": 0.8444852211862726,
+        "ci_low": 0.6899375123983338,
+        "n_resamples": 400,
+        "point": 0.7681015671493752
+      },
+      "linear": {
+        "D": 0.7079944455465186,
+        "D_upper_bound": 0.8461317198968459,
+        "ci_high": 0.9230658599484229,
+        "ci_low": 0.7764282880380877,
+        "n_resamples": 400,
+        "point": 0.8539972227732593
+      },
+      "mlp": {
+        "D": 0.6262646300337236,
+        "D_upper_bound": 0.762001586986709,
+        "ci_high": 0.8810007934933545,
+        "ci_low": 0.7406665344177743,
+        "n_resamples": 400,
+        "point": 0.8131323150168618
+      },
+      "rbf_svm": {
+        "D": 0.5540567347748464,
+        "D_upper_bound": 0.7084110295576276,
+        "ci_high": 0.8542055147788138,
+        "ci_low": 0.6964144019043841,
+        "n_resamples": 400,
+        "point": 0.7770283673874232
+      }
+    },
+    "T2:query_retrieval": {
+      "gbm": {
+        "D": 0.005078357468756289,
+        "D_upper_bound": 0.11449613171989681,
+        "ci_high": 0.5571007736560205,
+        "ci_low": 0.4427519341400516,
+        "n_resamples": 400,
+        "point": 0.49746082126562186
+      },
+      "linear": {
+        "D": 0.223646101963896,
+        "D_upper_bound": 0.324362229716326,
+        "ci_high": 0.662181114858163,
+        "ci_low": 0.5593334655822257,
+        "n_resamples": 400,
+        "point": 0.611823050981948
+      },
+      "mlp": {
+        "D": 0.12818885141836933,
+        "D_upper_bound": 0.24162269390993862,
+        "ci_high": 0.6208113469549693,
+        "ci_low": 0.5143126363816702,
+        "n_resamples": 400,
+        "point": 0.5640944257091847
+      },
+      "rbf_svm": {
+        "D": 0.14151953977385445,
+        "D_upper_bound": 0.2581313231501686,
+        "ci_high": 0.4798313826621702,
+        "ci_low": 0.3709343384249157,
+        "n_resamples": 400,
+        "point": 0.4292402301130728
+      }
+    },
+    "T2:source_degradation": {
+      "gbm": {
+        "D": 0.18230509819480267,
+        "D_upper_bound": 0.3299940487998414,
+        "ci_high": 0.6649970243999207,
+        "ci_low": 0.5242858559809561,
+        "n_resamples": 400,
+        "point": 0.5911525490974013
+      },
+      "linear": {
+        "D": 0.1446141638563776,
+        "D_upper_bound": 0.28651061297361613,
+        "ci_high": 0.6432553064868081,
+        "ci_low": 0.5084209482245586,
+        "n_resamples": 400,
+        "point": 0.5723070819281888
+      },
+      "mlp": {
+        "D": 0.1588970442372546,
+        "D_upper_bound": 0.2839119222376514,
+        "ci_high": 0.6419559611188257,
+        "ci_low": 0.5139258083713549,
+        "n_resamples": 400,
+        "point": 0.5794485221186273
+      },
+      "rbf_svm": {
+        "D": 0.11168418964491156,
+        "D_upper_bound": 0.2740031739734179,
+        "ci_high": 0.5136084110295577,
+        "ci_low": 0.36299841301329105,
+        "n_resamples": 400,
+        "point": 0.4441579051775442
+      }
+    }
+  },
+  "folds": 5,
+  "matched_effect": {
+    "grounding": {
+      "linear_reference": {
+        "dict_vs_distractor": 0.5066848261496555,
+        "dict_vs_donor": 0.5066527800032046,
+        "distractor_vs_donor": 0.4993430539977568
+      },
+      "mechanisms": [
+        "dict",
+        "distractor",
+        "donor"
+      ],
+      "note": "non-linear rerun requires the perturbed corpus; see --rebuild"
+    },
+    "source_degradation": {
+      "linear_reference": {
+        "lexical_vs_donor": 0.9842850628795738,
+        "rank_vs_donor": 0.9889506413518282,
+        "rank_vs_lexical": 0.6333357564383
+      },
+      "mechanisms": [
+        "rank",
+        "lexical",
+        "donor"
+      ],
+      "note": "non-linear rerun requires the perturbed corpus; see --rebuild"
+    }
+  },
+  "note": "untuned defaults; a sensitivity check on negative results, not a model comparison"
+}

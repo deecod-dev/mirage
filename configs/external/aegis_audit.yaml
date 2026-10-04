@@ -1,0 +1,11 @@
+experiment_id: external_aegis_audit_v1
+repository: https://github.com/kfq20/AEGIS.git
+commit: 18fecc5641235a67299cd832632839c9c80244d6
+released_data: evaluation/data/aegis.jsonl
+primary_v1_error_modes: [FM-1.1, FM-2.2]
+primary_available_arm_excludes_targets: true
+practical_loss_margin: 0.05
+folds: 5
+bootstrap_repeats: 1000
+seed: 20260823
+v2_status: weak_mechanism_contrast_not_effect_matched

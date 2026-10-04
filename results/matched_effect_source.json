@@ -1,0 +1,155 @@
+{
+  "analysis": "matched_effect_injector_identification",
+  "by_arm": {
+    "all_features": {
+      "D": 0.7181796754361038,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.8693947524357712,
+        "ci_low": 0.8485081383284542,
+        "n_resamples": 1000,
+        "point": 0.8590898377180519
+      },
+      "pairwise": {
+        "lexical_vs_donor": {
+          "ci_high": 0.9907426926864084,
+          "ci_low": 0.9766050316876044,
+          "n_resamples": 1000,
+          "point": 0.9841661104539356
+        },
+        "rank_vs_donor": {
+          "ci_high": 0.9936770177305199,
+          "ci_low": 0.9830281322486634,
+          "n_resamples": 1000,
+          "point": 0.9886070010110957
+        },
+        "rank_vs_lexical": {
+          "ci_high": 0.6630895579595694,
+          "ci_low": 0.6036952901447915,
+          "n_resamples": 1000,
+          "point": 0.6337586983961248
+        }
+      },
+      "permutation_null": {
+        "max": 0.5136861374164855,
+        "mean": 0.4921115817808941,
+        "repeats": 10
+      },
+      "practically_identifiable": true
+    },
+    "decoupled": {
+      "D": 0.7163601438883784,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.8686545764742941,
+        "ci_low": 0.8475149957155099,
+        "n_resamples": 1000,
+        "point": 0.8581800719441892
+      },
+      "pairwise": {
+        "lexical_vs_donor": {
+          "ci_high": 0.9908248029024392,
+          "ci_low": 0.9769562717666418,
+          "n_resamples": 1000,
+          "point": 0.9842850628795738
+        },
+        "rank_vs_donor": {
+          "ci_high": 0.9940393269936096,
+          "ci_low": 0.9832671935818559,
+          "n_resamples": 1000,
+          "point": 0.9889506413518282
+        },
+        "rank_vs_lexical": {
+          "ci_high": 0.6629655665770118,
+          "ci_low": 0.6036340792090985,
+          "n_resamples": 1000,
+          "point": 0.6333357564383
+        }
+      },
+      "permutation_null": {
+        "max": 0.513048420245703,
+        "mean": 0.492877062668103,
+        "repeats": 10
+      },
+      "practically_identifiable": true
+    },
+    "semantic_only": {
+      "D": 0.7158887398312199,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.8685194883724002,
+        "ci_low": 0.8473497564779509,
+        "n_resamples": 1000,
+        "point": 0.85794436991561
+      },
+      "pairwise": {
+        "lexical_vs_donor": {
+          "ci_high": 0.9895330126023486,
+          "ci_low": 0.9744970955782739,
+          "n_resamples": 1000,
+          "point": 0.9826329458568209
+        },
+        "rank_vs_donor": {
+          "ci_high": 0.9937840749135944,
+          "ci_low": 0.98304894892315,
+          "n_resamples": 1000,
+          "point": 0.988732561904825
+        },
+        "rank_vs_lexical": {
+          "ci_high": 0.6632204882336226,
+          "ci_low": 0.6020608507741821,
+          "n_resamples": 1000,
+          "point": 0.6322916184799201
+        }
+      },
+      "permutation_null": {
+        "max": 0.5153955278293606,
+        "mean": 0.4914133971270786,
+        "repeats": 10
+      },
+      "practically_identifiable": true
+    }
+  },
+  "entity_types": {
+    "donor": {
+      "PASSAGE": 389
+    },
+    "lexical": {
+      "PASSAGE": 389
+    },
+    "rank": {
+      "PASSAGE": 389
+    }
+  },
+  "family": "source_degradation",
+  "mechanisms": [
+    "rank",
+    "lexical",
+    "donor"
+  ],
+  "n_queries": 389,
+  "n_traces": 1167,
+  "severity": {
+    "donor": {
+      "changed_tokens": 20.840616966580978,
+      "char_change": 15.123393316195372,
+      "len_change": 2.2133676092544987,
+      "similarity": 0.6902554749235892
+    },
+    "lexical": {
+      "changed_tokens": 22.395886889460154,
+      "char_change": 31.568123393316196,
+      "len_change": 5.005141388174807,
+      "similarity": 0.6545125851449993
+    },
+    "rank": {
+      "changed_tokens": 22.02313624678663,
+      "char_change": 30.138817480719794,
+      "len_change": 4.624678663239075,
+      "similarity": 0.6630980771084499
+    }
+  },
+  "severity_matched": true,
+  "severity_spread": 0.03574288977858986,
+  "verdict": "injector mechanism IS identifiable with the semantic effect held fixed: detector features encode how a fault was manufactured, not only what it did"
+}

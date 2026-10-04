@@ -1,0 +1,22 @@
+# C6 operating-point replication. Identical to E4 except answer_top_k=3, which is the
+# value NOT chosen after inspecting natural-failure rates. Only T1 is injected and the
+# injection budget is halved: this run exists to test the SIGN of the natural-fault
+# results, not to re-estimate their magnitudes.
+experiment_id: E4_k3_v2
+stage: E4
+runtime: server
+partition: test
+max_examples: 150
+top_k: 5
+answer_top_k: 3
+natural_examples: 800
+batch_size: 32
+injector_tiers: [T1]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5
+hotpot:
+  train: 500
+  validation: 200
+  test: 800
+  reserve: 200

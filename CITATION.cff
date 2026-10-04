@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite the paper."
+title: "Can an Injected-Failure Benchmark Pick Your Monitor? A Four-Part Validity Audit for Enterprise Agent Deployment"
+authors:
+  - family-names: "Pal"
+    given-names: "Dev Utkarsh"
+  - family-names: "Verma"
+    given-names: "Arpan"
+  - family-names: "Sah"
+    given-names: "Chandan"
+  - family-names: "Upadhyay"
+    given-names: "Aditya"
+  - family-names: "Gupta"
+    given-names: "Harshit"
+license: MIT
+preferred-citation:
+  type: conference-paper
+  title: "Can an Injected-Failure Benchmark Pick Your Monitor? A Four-Part Validity Audit for Enterprise Agent Deployment"
+  authors:
+    - family-names: "Pal"
+      given-names: "Dev Utkarsh"
+    - family-names: "Verma"
+      given-names: "Arpan"
+    - family-names: "Sah"
+      given-names: "Chandan"
+    - family-names: "Upadhyay"
+      given-names: "Aditya"
+    - family-names: "Gupta"
+      given-names: "Harshit"
+  collection-title: "NeurIPS 2026 Workshop on Agentic AI Benchmarks and Applications for Enterprise Tasks (AABA4ET)"
+  year: 2026

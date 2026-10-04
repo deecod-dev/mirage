@@ -1,0 +1,12 @@
+experiment_id: E6_decomposition
+stage: E6
+runtime: server
+partition: test
+max_examples: 300
+top_k: 5
+answer_top_k: 3
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5

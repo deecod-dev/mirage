@@ -1,0 +1,844 @@
+{
+  "analysis": "union_of_detectors",
+  "by_condition": {
+    "T0:grounding": {
+      "external_only": {
+        "auroc": 0.9567159028322072,
+        "n_features": 2,
+        "sd": 0.006010230307661431
+      },
+      "judge": {
+        "auroc": 0.9556428319537932,
+        "n_features": 1,
+        "sd": 0.004029996510696456
+      },
+      "mirage": {
+        "auroc": 0.9996679040663093,
+        "n_features": 14,
+        "sd": 0.00024331962743597742
+      },
+      "mirage+judge": {
+        "auroc": 0.9997289562848986,
+        "gain": {
+          "delta": 6.10522185890261e-05,
+          "hi": 0.00019203691045794884,
+          "lo": -4.7420257974151166e-05,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 23
+        },
+        "n_features": 15,
+        "sd": 0.00023013894409132547,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.9996572128822534,
+        "gain": {
+          "delta": -1.0691184055930947e-05,
+          "hi": 1.4101531023369404e-05,
+          "lo": -6.631918590227492e-05,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 5
+        },
+        "n_features": 15,
+        "sd": 0.000255459486061221,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.9997088260494994,
+        "gain": {
+          "delta": 4.092198318987883e-05,
+          "hi": 0.00018552631578951922,
+          "lo": -7.668233176676419e-05,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 19
+        },
+        "n_features": 16,
+        "sd": 0.00024020080598543352,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.8389383160992103,
+        "n_features": 1,
+        "sd": 0.009356894732274332
+      },
+      "trivial": {
+        "auroc": 0.48772782739358467,
+        "n_features": 3,
+        "sd": 0.011485477704167014
+      }
+    },
+    "T0:query_retrieval": {
+      "external_only": {
+        "auroc": 0.6362229723433231,
+        "n_features": 2,
+        "sd": 0.026923341531862856
+      },
+      "judge": {
+        "auroc": 0.6505301167420369,
+        "n_features": 1,
+        "sd": 0.0227136985290322
+      },
+      "mirage": {
+        "auroc": 0.7574464649055891,
+        "n_features": 14,
+        "sd": 0.016830258664643143
+      },
+      "mirage+judge": {
+        "auroc": 0.7577437909465112,
+        "gain": {
+          "delta": 0.00029732604092232775,
+          "hi": 0.004131416666666563,
+          "lo": -0.009786504639858572,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 18
+        },
+        "n_features": 15,
+        "sd": 0.016410253031935475,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.7550741319898353,
+        "gain": {
+          "delta": -0.0023723329157538053,
+          "hi": 0.0010778033205618646,
+          "lo": -0.018475926166645062,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 10
+        },
+        "n_features": 15,
+        "sd": 0.017601496151745284,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.7559465965047317,
+        "gain": {
+          "delta": -0.0014998684008571716,
+          "hi": 0.004555687532512607,
+          "lo": -0.02086092162892561,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 17
+        },
+        "n_features": 16,
+        "sd": 0.017429045995497505,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5238025018336421,
+        "n_features": 1,
+        "sd": 0.07408743741857897
+      },
+      "trivial": {
+        "auroc": 0.7005158581171491,
+        "n_features": 3,
+        "sd": 0.018632519339154763
+      }
+    },
+    "T0:source_degradation": {
+      "external_only": {
+        "auroc": 0.5563450043134331,
+        "n_features": 2,
+        "sd": 0.021525570694932536
+      },
+      "judge": {
+        "auroc": 0.5444697808909048,
+        "n_features": 1,
+        "sd": 0.009865594232079533
+      },
+      "mirage": {
+        "auroc": 0.6796346373155758,
+        "n_features": 14,
+        "sd": 0.015259779101648807
+      },
+      "mirage+judge": {
+        "auroc": 0.6797789960575897,
+        "gain": {
+          "delta": 0.00014435874201412346,
+          "hi": 0.0037861375661374153,
+          "lo": -0.005917998647734945,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 15
+        },
+        "n_features": 15,
+        "sd": 0.015105376670613731,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.6792041528491117,
+        "gain": {
+          "delta": -0.00043048446646388517,
+          "hi": 0.0010694814814815154,
+          "lo": -0.0022054936305732297,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 8
+        },
+        "n_features": 15,
+        "sd": 0.014905891144378054,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.6796077290286449,
+        "gain": {
+          "delta": -2.6908286930713564e-05,
+          "hi": 0.004332819299905321,
+          "lo": -0.0061869655172414936,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 14
+        },
+        "n_features": 16,
+        "sd": 0.01482637063715079,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5459896134813149,
+        "n_features": 1,
+        "sd": 0.011580461760663519
+      },
+      "trivial": {
+        "auroc": 0.5038559227013389,
+        "n_features": 3,
+        "sd": 0.018353683202888608
+      }
+    },
+    "T0:tool_invocation": {
+      "external_only": {
+        "auroc": 0.4938086870628042,
+        "n_features": 2,
+        "sd": 0.015568899566212028
+      },
+      "judge": {
+        "auroc": 0.4949801585437097,
+        "n_features": 1,
+        "sd": 0.014100367111067675
+      },
+      "mirage": {
+        "auroc": 1.0,
+        "n_features": 14,
+        "sd": 0.0
+      },
+      "mirage+judge": {
+        "auroc": 1.0,
+        "gain": {
+          "delta": 0.0,
+          "hi": 0.0,
+          "lo": 0.0,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.0,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 1.0,
+        "gain": {
+          "delta": 0.0,
+          "hi": 0.0,
+          "lo": 0.0,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.0,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 1.0,
+        "gain": {
+          "delta": 0.0,
+          "hi": 0.0,
+          "lo": 0.0,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 16,
+        "sd": 0.0,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5075006020327868,
+        "n_features": 1,
+        "sd": 0.02942505114618219
+      },
+      "trivial": {
+        "auroc": 1.0,
+        "n_features": 3,
+        "sd": 2.2204460492503132e-17
+      }
+    },
+    "T1:grounding": {
+      "external_only": {
+        "auroc": 0.830320765254311,
+        "n_features": 2,
+        "sd": 0.012197696618215929
+      },
+      "judge": {
+        "auroc": 0.7743132606949417,
+        "n_features": 1,
+        "sd": 0.012772942149157852
+      },
+      "mirage": {
+        "auroc": 0.6127119521626984,
+        "n_features": 14,
+        "sd": 0.011503585160244757
+      },
+      "mirage+judge": {
+        "auroc": 0.7805618405455322,
+        "gain": {
+          "delta": -0.049758924708778504,
+          "hi": -0.03792605263157889,
+          "lo": -0.06201396306571867,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.014157915259089946,
+        "vs_best_single": "external_only"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.7238493436695255,
+        "gain": {
+          "delta": -0.10647142158478534,
+          "hi": -0.07471531309297913,
+          "lo": -0.12933859619521648,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.012540745072892446,
+        "vs_best_single": "external_only"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.806439965344093,
+        "gain": {
+          "delta": -0.02388079991021796,
+          "hi": -0.015557342105263074,
+          "lo": -0.03633801369863017,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 16,
+        "sd": 0.013947726004967508,
+        "vs_best_single": "external_only"
+      },
+      "nli-large": {
+        "auroc": 0.8129702768945196,
+        "n_features": 1,
+        "sd": 0.011201780286395197
+      },
+      "trivial": {
+        "auroc": 0.4998591944020086,
+        "n_features": 3,
+        "sd": 0.01646864411179729
+      }
+    },
+    "T1:query_retrieval": {
+      "external_only": {
+        "auroc": 0.644559011502876,
+        "n_features": 2,
+        "sd": 0.013071522420679476
+      },
+      "judge": {
+        "auroc": 0.6590822722652109,
+        "n_features": 1,
+        "sd": 0.013527179775459766
+      },
+      "mirage": {
+        "auroc": 0.8645715464601558,
+        "n_features": 14,
+        "sd": 0.007495237940863161
+      },
+      "mirage+judge": {
+        "auroc": 0.8655260175090528,
+        "gain": {
+          "delta": 0.0009544710488969965,
+          "hi": 0.0025650091240877245,
+          "lo": -0.0027154223227752183,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 21
+        },
+        "n_features": 15,
+        "sd": 0.007707337134834572,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.8644246385487633,
+        "gain": {
+          "delta": -0.00014690791139265524,
+          "hi": 0.0007757501712719826,
+          "lo": -0.0025524489795918813,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 16
+        },
+        "n_features": 15,
+        "sd": 0.0075955182098691116,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.8657610478035241,
+        "gain": {
+          "delta": 0.001189501343368251,
+          "hi": 0.00359279979144953,
+          "lo": -0.0037010804321728537,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 21
+        },
+        "n_features": 16,
+        "sd": 0.007944133552878567,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5470911295565132,
+        "n_features": 1,
+        "sd": 0.07215003307251178
+      },
+      "trivial": {
+        "auroc": 0.7012567499730972,
+        "n_features": 3,
+        "sd": 0.013432495416190647
+      }
+    },
+    "T1:source_degradation": {
+      "external_only": {
+        "auroc": 0.8492100901964608,
+        "n_features": 2,
+        "sd": 0.01374789676921215
+      },
+      "judge": {
+        "auroc": 0.8113626732680782,
+        "n_features": 1,
+        "sd": 0.01623652546042397
+      },
+      "mirage": {
+        "auroc": 0.9698817236092486,
+        "n_features": 14,
+        "sd": 0.004351485685453365
+      },
+      "mirage+judge": {
+        "auroc": 0.9713239406051241,
+        "gain": {
+          "delta": 0.0014422169958753228,
+          "hi": 0.0029120106053910576,
+          "lo": -0.0002542075163398882,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 23
+        },
+        "n_features": 15,
+        "sd": 0.004531605509702729,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.969896406192565,
+        "gain": {
+          "delta": 1.4682583316401044e-05,
+          "hi": 0.0011212417719267398,
+          "lo": -0.002950638241873915,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 16
+        },
+        "n_features": 15,
+        "sd": 0.0047550193804170035,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.9710543989826022,
+        "gain": {
+          "delta": 0.0011726753733535622,
+          "hi": 0.00308764145324587,
+          "lo": -0.0020187524674299294,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 22
+        },
+        "n_features": 16,
+        "sd": 0.004810765530539285,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.8230010206909973,
+        "n_features": 1,
+        "sd": 0.011700230404984717
+      },
+      "trivial": {
+        "auroc": 0.6372268065874099,
+        "n_features": 3,
+        "sd": 0.018930188855152543
+      }
+    },
+    "T1:tool_invocation": {
+      "external_only": {
+        "auroc": 0.5363849752291973,
+        "n_features": 2,
+        "sd": 0.021803109824268193
+      },
+      "judge": {
+        "auroc": 0.4969558253412431,
+        "n_features": 1,
+        "sd": 0.01334720976803547
+      },
+      "mirage": {
+        "auroc": 0.9902204966298603,
+        "n_features": 14,
+        "sd": 0.0019400064994685895
+      },
+      "mirage+judge": {
+        "auroc": 0.9901588099452927,
+        "gain": {
+          "delta": -6.168668456777659e-05,
+          "hi": 0.00041269315673289045,
+          "lo": -0.0010365182436610442,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 16
+        },
+        "n_features": 15,
+        "sd": 0.002054761812069185,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.9901347596541299,
+        "gain": {
+          "delta": -8.573697573043936e-05,
+          "hi": 0.0002556536502546391,
+          "lo": -0.0008352655166582012,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 13
+        },
+        "n_features": 15,
+        "sd": 0.0019680372513040997,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.9902081372912019,
+        "gain": {
+          "delta": -1.2359338658352038e-05,
+          "hi": 0.0005538079470198687,
+          "lo": -0.0010207294028723001,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 16
+        },
+        "n_features": 16,
+        "sd": 0.002082084736845823,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5218550173344945,
+        "n_features": 1,
+        "sd": 0.010924930865127183
+      },
+      "trivial": {
+        "auroc": 0.5515178889223665,
+        "n_features": 3,
+        "sd": 0.01939480528052266
+      }
+    },
+    "T2:grounding": {
+      "external_only": {
+        "auroc": 0.7496661109891588,
+        "n_features": 2,
+        "sd": 0.013227879226528483
+      },
+      "judge": {
+        "auroc": 0.6914616616543799,
+        "n_features": 1,
+        "sd": 0.013116818311576114
+      },
+      "mirage": {
+        "auroc": 0.5517131930351334,
+        "n_features": 14,
+        "sd": 0.011073582406411995
+      },
+      "mirage+judge": {
+        "auroc": 0.6917668018086939,
+        "gain": {
+          "delta": -0.05789930918046497,
+          "hi": -0.040006749760306874,
+          "lo": -0.0738382962962962,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.013504213468251971,
+        "vs_best_single": "external_only"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.6796234891190598,
+        "gain": {
+          "delta": -0.07004262187009902,
+          "hi": -0.04262059062067649,
+          "lo": -0.096153947869102,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 15,
+        "sd": 0.01689362525716501,
+        "vs_best_single": "external_only"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.7218150668356317,
+        "gain": {
+          "delta": -0.027851044153527026,
+          "hi": -0.012091344446849945,
+          "lo": -0.047059164029535826,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 0
+        },
+        "n_features": 16,
+        "sd": 0.01555537748013546,
+        "vs_best_single": "external_only"
+      },
+      "nli-large": {
+        "auroc": 0.7298880599806579,
+        "n_features": 1,
+        "sd": 0.014419459421472944
+      },
+      "trivial": {
+        "auroc": 0.5071591738324617,
+        "n_features": 3,
+        "sd": 0.018424232365162486
+      }
+    },
+    "T2:query_retrieval": {
+      "external_only": {
+        "auroc": 0.5368950258738467,
+        "n_features": 2,
+        "sd": 0.013303415028584105
+      },
+      "judge": {
+        "auroc": 0.5404882393949125,
+        "n_features": 1,
+        "sd": 0.00996178470167306
+      },
+      "mirage": {
+        "auroc": 0.5735875898439884,
+        "n_features": 14,
+        "sd": 0.01728873453192481
+      },
+      "mirage+judge": {
+        "auroc": 0.5730204548912867,
+        "gain": {
+          "delta": -0.000567134952701589,
+          "hi": 0.0031631069567375145,
+          "lo": -0.007091821112006391,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 12
+        },
+        "n_features": 15,
+        "sd": 0.017491317645422087,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.5717299954801116,
+        "gain": {
+          "delta": -0.0018575943638768288,
+          "hi": 2.1271523178856273e-05,
+          "lo": -0.006578620880642472,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 2
+        },
+        "n_features": 15,
+        "sd": 0.017624348256526624,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.5713415396299131,
+        "gain": {
+          "delta": -0.0022460502140752192,
+          "hi": 0.0017142344497607313,
+          "lo": -0.008925172352045818,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 3
+        },
+        "n_features": 16,
+        "sd": 0.017595995339645915,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.5255048474440881,
+        "n_features": 1,
+        "sd": 0.029035478592734795
+      },
+      "trivial": {
+        "auroc": 0.5269153123514069,
+        "n_features": 3,
+        "sd": 0.01512683888377936
+      }
+    },
+    "T2:source_degradation": {
+      "external_only": {
+        "auroc": 0.6797285623303881,
+        "n_features": 2,
+        "sd": 0.01887966568259247
+      },
+      "judge": {
+        "auroc": 0.6299744711430122,
+        "n_features": 1,
+        "sd": 0.016882069440570278
+      },
+      "mirage": {
+        "auroc": 0.7814993790285848,
+        "n_features": 14,
+        "sd": 0.012149936022301026
+      },
+      "mirage+judge": {
+        "auroc": 0.7854319173290769,
+        "gain": {
+          "delta": 0.003932538300491983,
+          "hi": 0.008556077554064111,
+          "lo": -0.002425373398144015,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 22
+        },
+        "n_features": 15,
+        "sd": 0.011148390575585754,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.7818776841783044,
+        "gain": {
+          "delta": 0.00037830514971954,
+          "hi": 0.0025199840764330776,
+          "lo": -0.004926242277733017,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 20
+        },
+        "n_features": 15,
+        "sd": 0.011771632642870006,
+        "vs_best_single": "mirage"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.7848911661778212,
+        "gain": {
+          "delta": 0.0033917871492361584,
+          "hi": 0.007412886859462197,
+          "lo": -0.003426666666666711,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 20
+        },
+        "n_features": 16,
+        "sd": 0.011009737200801988,
+        "vs_best_single": "mirage"
+      },
+      "nli-large": {
+        "auroc": 0.6873383472093237,
+        "n_features": 1,
+        "sd": 0.017598563073091034
+      },
+      "trivial": {
+        "auroc": 0.5724272269134245,
+        "n_features": 3,
+        "sd": 0.015884852210416897
+      }
+    },
+    "T2:tool_invocation": {
+      "external_only": {
+        "auroc": 0.4912774170929164,
+        "n_features": 2,
+        "sd": 0.011537026997889194
+      },
+      "judge": {
+        "auroc": 0.4896669780701539,
+        "n_features": 1,
+        "sd": 0.007638073990272039
+      },
+      "mirage": {
+        "auroc": 0.4878691520545999,
+        "n_features": 14,
+        "sd": 0.010958510607279705
+      },
+      "mirage+judge": {
+        "auroc": 0.4850537531463722,
+        "gain": {
+          "delta": -0.014083138649266231,
+          "hi": 0.011825939933259193,
+          "lo": -0.04977874978324949,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 5
+        },
+        "n_features": 15,
+        "sd": 0.011816042662165287,
+        "vs_best_single": "nli-large"
+      },
+      "mirage+nli-large": {
+        "auroc": 0.48740797636620703,
+        "gain": {
+          "delta": -0.011728915429431384,
+          "hi": 0.014095372636262512,
+          "lo": -0.04114778047511701,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 5
+        },
+        "n_features": 15,
+        "sd": 0.01027418897654698,
+        "vs_best_single": "nli-large"
+      },
+      "mirage+nli-large+judge": {
+        "auroc": 0.48466643169810003,
+        "gain": {
+          "delta": -0.014470460097538445,
+          "hi": 0.010694171301446093,
+          "lo": -0.04737810820183801,
+          "n_splits": 25,
+          "significant": false,
+          "wins": 5
+        },
+        "n_features": 16,
+        "sd": 0.011457499574785646,
+        "vs_best_single": "nli-large"
+      },
+      "nli-large": {
+        "auroc": 0.49913689179563847,
+        "n_features": 1,
+        "sd": 0.010601995896737097
+      },
+      "trivial": {
+        "auroc": 0.5051382838874953,
+        "n_features": 3,
+        "sd": 0.018976359719517884
+      }
+    }
+  },
+  "experiment": "E4_fingerprint_v2",
+  "externals_used": [
+    "judge",
+    "nli",
+    "nli-large"
+  ],
+  "interval": "2.5/97.5 percentile of paired per-split differences across 25 query-disjoint splits; not a cluster bootstrap",
+  "n_queries": 800,
+  "n_traces": 18800,
+  "repeats": 25,
+  "seed": 11
+}

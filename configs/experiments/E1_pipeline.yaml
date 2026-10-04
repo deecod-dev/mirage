@@ -1,0 +1,14 @@
+# Clean-pipeline validation. No injection: E1 is not in INJECTING_STAGES.
+# Gate G-1: HotpotQA answer F1 within the published RAG baseline band.
+experiment_id: E1_pipeline_v2
+stage: E1
+runtime: server
+partition: validation
+max_examples: 200
+top_k: 5
+answer_top_k: 2
+batch_size: 32
+injector_tiers: [T0]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5

@@ -1,0 +1,22 @@
+# C6b operating-point replication, ALL THREE TIERS. Same experiment_id and same
+# clean traces as E4_k3.yaml, so the 800 clean traces are reused rather than
+# regenerated; this run only adds the T0 and T2 injections that the first k=3 run
+# omitted, so that decision validity can be computed per tier at k=3.
+experiment_id: E4_k3_v2
+stage: E4
+runtime: server
+partition: test
+max_examples: 150
+top_k: 5
+answer_top_k: 3
+natural_examples: 800
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 7.5
+hotpot:
+  train: 500
+  validation: 200
+  test: 800
+  reserve: 200

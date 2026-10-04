@@ -1,0 +1,15 @@
+# Fast pre-flight for the rebuilt injector ladder. Exercises all 12 (tier, family)
+# conditions including the T2 grounding rewrite, which needs the real generator.
+# Run after P1 passes; confirms throughput before committing to E3/E4.
+experiment_id: P2_injector_check
+stage: E3
+runtime: server
+partition: validation
+max_examples: 24
+top_k: 5
+answer_top_k: 2
+batch_size: 32
+injector_tiers: [T0, T1, T2]
+bootstrap_repeats: 1000
+checkpoint_every: 25
+max_job_hours: 2.0

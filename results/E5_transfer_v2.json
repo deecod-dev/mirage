@@ -1,0 +1,209 @@
+{
+  "analysis": "injected_to_natural_transfer_gap",
+  "bootstrap_repeats": 1000,
+  "by_tier": {
+    "T0": {
+      "all_features": {
+        "in_distribution": {
+          "ci_high": 0.765480433145377,
+          "ci_low": 0.7158202550887304,
+          "n_resamples": 1000,
+          "point": 0.7402053990610329
+        },
+        "natural_transfer": {
+          "ci_high": 0.7293264009474796,
+          "ci_low": 0.648376159742755,
+          "n_resamples": 1000,
+          "point": 0.6905278654686741
+        },
+        "transfer_gap": 0.049677533592358825
+      },
+      "coupled_only": {
+        "in_distribution": {
+          "ci_high": 0.6158254142903781,
+          "ci_low": 0.5602324755305028,
+          "n_resamples": 1000,
+          "point": 0.5873180751173709
+        },
+        "natural_transfer": {
+          "ci_high": 0.7330134404892603,
+          "ci_low": 0.6512706052478457,
+          "n_resamples": 1000,
+          "point": 0.6917192812044682
+        },
+        "transfer_gap": -0.10440120608709735
+      },
+      "decoupled": {
+        "in_distribution": {
+          "ci_high": 0.7580419183037312,
+          "ci_low": 0.7064314592806464,
+          "n_resamples": 1000,
+          "point": 0.7317458920187793
+        },
+        "natural_transfer": {
+          "ci_high": 0.7021106771784581,
+          "ci_low": 0.6190954169214344,
+          "n_resamples": 1000,
+          "point": 0.6621008377853327
+        },
+        "transfer_gap": 0.06964505423344658
+      },
+      "semantic_only": {
+        "in_distribution": {
+          "ci_high": 0.75675751445021,
+          "ci_low": 0.7038420064243686,
+          "n_resamples": 1000,
+          "point": 0.729242957746479
+        },
+        "natural_transfer": {
+          "ci_high": 0.7242385304906548,
+          "ci_low": 0.6434909896361026,
+          "n_resamples": 1000,
+          "point": 0.6861036911121904
+        },
+        "transfer_gap": 0.043139266634288576
+      },
+      "trivial_baselines": {
+        "in_distribution": {
+          "ci_high": 0.6294494526815565,
+          "ci_low": 0.576827521234994,
+          "n_resamples": 1000,
+          "point": 0.6032849178403756
+        },
+        "natural_transfer": {
+          "ci_high": 0.6608693517967882,
+          "ci_low": 0.5752173332998385,
+          "n_resamples": 1000,
+          "point": 0.6197183098591549
+        },
+        "transfer_gap": -0.016433392018779247
+      }
+    },
+    "T1": {
+      "all_features": {
+        "in_distribution": {
+          "ci_high": 0.9288332211773923,
+          "ci_low": 0.9052293023910202,
+          "n_resamples": 1000,
+          "point": 0.9167737676056339
+        },
+        "natural_transfer": {
+          "ci_high": 0.7501536712030428,
+          "ci_low": 0.6680556315586947,
+          "n_resamples": 1000,
+          "point": 0.7103949125789217
+        },
+        "transfer_gap": 0.20637885502671216
+      },
+      "coupled_only": {
+        "in_distribution": {
+          "ci_high": 0.8055689448868032,
+          "ci_low": 0.7644865830182211,
+          "n_resamples": 1000,
+          "point": 0.7856329225352113
+        },
+        "natural_transfer": {
+          "ci_high": 0.7282270968708701,
+          "ci_low": 0.6451981935039046,
+          "n_resamples": 1000,
+          "point": 0.6863617047110249
+        },
+        "transfer_gap": 0.09927121782418646
+      },
+      "decoupled": {
+        "in_distribution": {
+          "ci_high": 0.9265518874197824,
+          "ci_low": 0.9021113177604538,
+          "n_resamples": 1000,
+          "point": 0.9143864436619719
+        },
+        "natural_transfer": {
+          "ci_high": 0.7293592759100704,
+          "ci_low": 0.6440056669655441,
+          "n_resamples": 1000,
+          "point": 0.6877124817872753
+        },
+        "transfer_gap": 0.22667396187469657
+      },
+      "semantic_only": {
+        "in_distribution": {
+          "ci_high": 0.9266064829414543,
+          "ci_low": 0.902442192330057,
+          "n_resamples": 1000,
+          "point": 0.9142285798122066
+        },
+        "natural_transfer": {
+          "ci_high": 0.7456417881201133,
+          "ci_low": 0.6631210861589959,
+          "n_resamples": 1000,
+          "point": 0.7060769791160757
+        },
+        "transfer_gap": 0.20815160069613092
+      },
+      "trivial_baselines": {
+        "in_distribution": {
+          "ci_high": 0.6821449302508603,
+          "ci_low": 0.6292841815957904,
+          "n_resamples": 1000,
+          "point": 0.6577282863849765
+        },
+        "natural_transfer": {
+          "ci_high": 0.6641760525739553,
+          "ci_low": 0.5762342022897907,
+          "n_resamples": 1000,
+          "point": 0.6193540553666829
+        },
+        "transfer_gap": 0.038374231018293625
+      }
+    }
+  },
+  "families": [
+    "query_retrieval",
+    "source_degradation"
+  ],
+  "kill_condition_K3": false,
+  "min_natural_required": 150,
+  "n_clean_test": 800,
+  "n_natural_failures_test": 232,
+  "n_natural_failures_train": 61,
+  "natural_arm_available": true,
+  "natural_supervised_ceiling": {
+    "all_features": {
+      "ci_high": 0.7982773614068756,
+      "ci_low": 0.723912776145001,
+      "n_resamples": 1000,
+      "point": 0.7629006799417193
+    },
+    "coupled_only": {
+      "ci_high": 0.7444742203165442,
+      "ci_low": 0.6632480350735938,
+      "n_resamples": 1000,
+      "point": 0.7047337906750849
+    },
+    "decoupled": {
+      "ci_high": 0.760299383373402,
+      "ci_low": 0.6850435801138415,
+      "n_resamples": 1000,
+      "point": 0.7237812651772706
+    },
+    "semantic_only": {
+      "ci_high": 0.7977894310293892,
+      "ci_low": 0.723575739849928,
+      "n_resamples": 1000,
+      "point": 0.7621569936862554
+    },
+    "trivial_baselines": {
+      "ci_high": 0.6435347088447166,
+      "ci_low": 0.5501487774989358,
+      "n_resamples": 1000,
+      "point": 0.5981058766391453
+    }
+  },
+  "seed": 11,
+  "test_experiment": "E4_fingerprint_v2",
+  "tiers": [
+    "T0",
+    "T1"
+  ],
+  "train_experiment": "E3_positive_control_v2"
+}

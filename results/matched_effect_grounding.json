@@ -1,0 +1,159 @@
+{
+  "analysis": "matched_effect_injector_identification",
+  "by_arm": {
+    "all_features": {
+      "D": 0.033137851839982746,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.5225295358649789,
+        "ci_low": 0.5109999465897559,
+        "n_resamples": 1000,
+        "point": 0.5165689259199914
+      },
+      "pairwise": {
+        "dict_vs_distractor": {
+          "ci_high": 0.5335763499439192,
+          "ci_low": 0.5153637237622176,
+          "n_resamples": 1000,
+          "point": 0.5241147252042941
+        },
+        "dict_vs_donor": {
+          "ci_high": 0.5077790418202209,
+          "ci_low": 0.49729178016343534,
+          "n_resamples": 1000,
+          "point": 0.5021374779682743
+        },
+        "distractor_vs_donor": {
+          "ci_high": 0.5345622496394808,
+          "ci_low": 0.5156469315814773,
+          "n_resamples": 1000,
+          "point": 0.5245473481813812
+        }
+      },
+      "permutation_null": {
+        "max": 0.5021567056561448,
+        "mean": 0.49706628211290926,
+        "repeats": 10
+      },
+      "practically_identifiable": false
+    },
+    "decoupled": {
+      "D": 0.00892164717192756,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.5058762217593333,
+        "ci_low": 0.5037510815574427,
+        "n_resamples": 1000,
+        "point": 0.5044608235859638
+      },
+      "pairwise": {
+        "dict_vs_distractor": {
+          "ci_high": 0.5090953372856915,
+          "ci_low": 0.5053420926133632,
+          "n_resamples": 1000,
+          "point": 0.5066848261496555
+        },
+        "dict_vs_donor": {
+          "ci_high": 0.5090221118410512,
+          "ci_low": 0.5054221278641244,
+          "n_resamples": 1000,
+          "point": 0.5066527800032046
+        },
+        "distractor_vs_donor": {
+          "ci_high": 0.5005450248357635,
+          "ci_low": 0.4979582598942477,
+          "n_resamples": 1000,
+          "point": 0.4993430539977568
+        }
+      },
+      "permutation_null": {
+        "max": 0.5001404689419431,
+        "mean": 0.4996285317523901,
+        "repeats": 10
+      },
+      "practically_identifiable": false
+    },
+    "semantic_only": {
+      "D": 0.029999465897559086,
+      "above_null": true,
+      "macro_auroc": {
+        "ci_high": 0.5209423970517545,
+        "ci_low": 0.5096383592373017,
+        "n_resamples": 1000,
+        "point": 0.5149997329487795
+      },
+      "pairwise": {
+        "dict_vs_distractor": {
+          "ci_high": 0.5312240025636917,
+          "ci_low": 0.5132302515622497,
+          "n_resamples": 1000,
+          "point": 0.5220381349142766
+        },
+        "dict_vs_donor": {
+          "ci_high": 0.5097104630668162,
+          "ci_low": 0.4939626662393847,
+          "n_resamples": 1000,
+          "point": 0.501150456657587
+        },
+        "distractor_vs_donor": {
+          "ci_high": 0.5329343053997756,
+          "ci_low": 0.5146711264220477,
+          "n_resamples": 1000,
+          "point": 0.5233744592212786
+        }
+      },
+      "permutation_null": {
+        "max": 0.502219729744165,
+        "mean": 0.4969457886022539,
+        "repeats": 10
+      },
+      "practically_identifiable": false
+    }
+  },
+  "entity_types": {
+    "dict": {
+      "PROPER": 355,
+      "YEAR": 40
+    },
+    "distractor": {
+      "PROPER": 355,
+      "YEAR": 40
+    },
+    "donor": {
+      "PROPER": 355,
+      "YEAR": 40
+    }
+  },
+  "family": "grounding",
+  "mechanisms": [
+    "dict",
+    "distractor",
+    "donor"
+  ],
+  "n_queries": 395,
+  "n_traces": 1185,
+  "practical_margin": 0.05,
+  "severity": {
+    "dict": {
+      "changed_tokens": 13.448101265822785,
+      "char_change": 1.7924050632911392,
+      "len_change": 0.369620253164557,
+      "similarity": 0.9124716769292143
+    },
+    "distractor": {
+      "changed_tokens": 5.134177215189873,
+      "char_change": -0.21265822784810126,
+      "len_change": -0.0379746835443038,
+      "similarity": 0.9140217441665935
+    },
+    "donor": {
+      "changed_tokens": 5.782278481012658,
+      "char_change": 0.0,
+      "len_change": -0.017721518987341773,
+      "similarity": 0.9143660291983302
+    }
+  },
+  "severity_matched": true,
+  "severity_spread": 0.0018943522691159398,
+  "verdict": "injector mechanism is NOT identifiable once the semantic effect is held fixed (D=0.009, below the 0.05 practical margin); for this family the tier signal is better explained by severity than by manufacturing signature"
+}

@@ -1,0 +1,477 @@
+<title>MIRAGE Validity Audit</title>
+<style>
+:root{
+  --ground:#F2F3F1; --surface:#FFFFFF; --surface-2:#FAFAF8;
+  --ink:#131A18; --ink-2:#374440; --muted:#5A6560; --line:#DCDFDB; --line-2:#E9EBE7;
+  --signal:#008660; --artifact:#B84834; --warn:#A66A00;
+  --stripe-crit:#B84834; --stripe-major:#A66A00; --stripe-mod:#5A6560;
+  --mono:ui-monospace,"SFMono-Regular","JetBrains Mono","Roboto Mono",Menlo,Consolas,monospace;
+  --serif:Charter,"Bitstream Charter","Iowan Old Style","Source Serif Pro",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#0E1114; --surface:#161B22; --surface-2:#1B222A;
+    --ink:#E6EAE8; --ink-2:#C2CBC7; --muted:#8D9995; --line:#262D33; --line-2:#1F262D;
+    --signal:#009E7E; --artifact:#D05E4A; --warn:#D99A22;
+    --stripe-crit:#D05E4A; --stripe-major:#D99A22; --stripe-mod:#8D9995;
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#0E1114; --surface:#161B22; --surface-2:#1B222A;
+  --ink:#E6EAE8; --ink-2:#C2CBC7; --muted:#8D9995; --line:#262D33; --line-2:#1F262D;
+  --signal:#009E7E; --artifact:#D05E4A; --warn:#D99A22;
+  --stripe-crit:#D05E4A; --stripe-major:#D99A22; --stripe-mod:#8D9995;
+}
+
+*{box-sizing:border-box}
+body{
+  background:var(--ground); color:var(--ink);
+  font-family:var(--serif); font-size:17px; line-height:1.62;
+  margin:0; padding:0 20px 96px;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:820px; margin:0 auto}
+p{margin:0 0 1.05em; max-width:68ch}
+a{color:var(--signal)}
+strong{font-weight:600}
+code,.mono{font-family:var(--mono)}
+code{font-size:.855em; background:var(--surface-2); border:1px solid var(--line-2); border-radius:3px; padding:.08em .34em}
+
+/* ── masthead ─────────────────────────────────────── */
+header{padding:68px 0 0}
+.eyebrow{
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.16em; text-transform:uppercase;
+  color:var(--muted); margin:0 0 22px; display:flex; gap:14px; flex-wrap:wrap; align-items:baseline;
+}
+.eyebrow span::after{content:"·"; margin-left:14px; color:var(--line)}
+.eyebrow span:last-child::after{content:""}
+h1{
+  font-family:var(--mono); font-weight:600; font-size:clamp(30px,5.2vw,44px); line-height:1.1;
+  letter-spacing:-.02em; margin:0 0 26px; text-wrap:balance;
+}
+.verdict{
+  font-size:20px; line-height:1.5; color:var(--ink-2); max-width:64ch; margin:0 0 40px;
+  border-left:3px solid var(--signal); padding-left:20px;
+}
+.verdict b{color:var(--ink); font-weight:600}
+
+/* ── stat strip ───────────────────────────────────── */
+.stats{
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(158px,1fr)); gap:1px;
+  background:var(--line); border:1px solid var(--line); margin:0 0 12px;
+}
+.stat{background:var(--surface); padding:18px 18px 16px}
+.stat .v{
+  font-family:var(--mono); font-size:27px; font-weight:600; letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums; line-height:1.15; display:block;
+}
+.stat .k{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.11em; text-transform:uppercase;
+  color:var(--muted); margin-top:8px; display:block; line-height:1.45;
+}
+.stat.bad .v{color:var(--artifact)}
+.stat.good .v{color:var(--signal)}
+.note{font-family:var(--mono); font-size:12px; color:var(--muted); margin:0 0 56px; line-height:1.6}
+
+/* ── sections ─────────────────────────────────────── */
+section{margin:0 0 60px}
+h2{
+  font-family:var(--mono); font-size:12px; letter-spacing:.15em; text-transform:uppercase;
+  color:var(--muted); font-weight:600; margin:0 0 6px;
+}
+h2 + .h2sub{
+  font-family:var(--mono); font-weight:600; font-size:23px; letter-spacing:-.015em;
+  color:var(--ink); margin:0 0 22px; line-height:1.3; text-wrap:balance;
+}
+h3{font-family:var(--mono); font-size:16px; font-weight:600; letter-spacing:-.01em; margin:34px 0 10px}
+.rule{height:1px; background:var(--line); border:0; margin:0 0 26px}
+
+/* ── chart ────────────────────────────────────────── */
+.figure{background:var(--surface); border:1px solid var(--line); padding:24px 24px 20px; margin:0 0 18px}
+.figtitle{font-family:var(--mono); font-size:13.5px; font-weight:600; margin:0 0 3px}
+.figsub{font-family:var(--mono); font-size:11.5px; color:var(--muted); margin:0 0 26px; line-height:1.55}
+.chart{display:grid; gap:11px}
+.row{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(120px,2.4fr) auto; gap:14px; align-items:center}
+.rlabel{font-family:var(--mono); font-size:12px; color:var(--ink-2); line-height:1.35; text-align:right}
+.rlabel.head{color:var(--ink); font-weight:600}
+.track{position:relative; height:22px; background:var(--surface-2); border:1px solid var(--line-2)}
+.gate,.chance{position:absolute; top:-4px; bottom:-4px; width:1px; background:var(--muted); opacity:.55}
+.gate{left:30%; background:var(--warn); opacity:1; width:1.5px}
+.bar{position:absolute; left:0; top:0; bottom:0; border-radius:0 3px 3px 0}
+.bar.ok{background:var(--signal)}
+.bar.no{background:var(--artifact)}
+.rval{
+  font-family:var(--mono); font-size:12.5px; font-variant-numeric:tabular-nums;
+  display:flex; gap:9px; align-items:baseline; justify-content:flex-end; min-width:104px;
+}
+.rval .n{font-weight:600}
+.chip{
+  font-family:var(--mono); font-size:9.5px; letter-spacing:.09em; text-transform:uppercase;
+  padding:2px 6px; border:1px solid currentColor; border-radius:2px; line-height:1.4;
+}
+.chip.ok{color:var(--signal)}
+.chip.no{color:var(--artifact)}
+.axis{display:grid; grid-template-columns:minmax(0,1.35fr) minmax(120px,2.4fr) auto; gap:14px; margin-top:14px}
+.axis .ticks{grid-column:2; position:relative; height:16px; font-family:var(--mono); font-size:10.5px; color:var(--muted)}
+.axis .ticks i{position:absolute; font-style:normal; transform:translateX(-50%); white-space:nowrap}
+.axis .sp{min-width:104px}
+.caption{font-family:var(--mono); font-size:11.5px; color:var(--muted); line-height:1.65; margin:0 0 42px; max-width:74ch}
+
+/* ── findings ─────────────────────────────────────── */
+.finding{
+  background:var(--surface); border:1px solid var(--line); border-left:3px solid var(--stripe-mod);
+  padding:20px 22px; margin:0 0 12px;
+}
+.finding.crit{border-left-color:var(--stripe-crit)}
+.finding.major{border-left-color:var(--stripe-major)}
+.fhead{display:flex; gap:12px; align-items:baseline; flex-wrap:wrap; margin:0 0 10px}
+.fid{font-family:var(--mono); font-size:12px; font-weight:600; color:var(--muted); letter-spacing:.06em}
+.fsev{font-family:var(--mono); font-size:9.5px; letter-spacing:.11em; text-transform:uppercase; padding:2px 7px; border:1px solid currentColor; border-radius:2px}
+.crit .fsev{color:var(--stripe-crit)}
+.major .fsev{color:var(--stripe-major)}
+.mod .fsev{color:var(--stripe-mod)}
+.ftitle{font-family:var(--mono); font-size:15px; font-weight:600; letter-spacing:-.01em; line-height:1.35; margin:0 0 10px; width:100%}
+.finding p{font-size:15.5px; line-height:1.6; margin:0 0 .8em; color:var(--ink-2)}
+.finding p:last-child{margin-bottom:0}
+.finding .ev{
+  font-family:var(--mono); font-size:12px; color:var(--muted); line-height:1.65;
+  border-top:1px solid var(--line-2); padding-top:10px; margin-top:12px;
+}
+.finding .ev b{color:var(--ink-2); font-weight:600}
+
+/* ── tables ───────────────────────────────────────── */
+.tw{overflow-x:auto; border:1px solid var(--line); background:var(--surface); margin:0 0 18px}
+table{border-collapse:collapse; width:100%; font-family:var(--mono); font-size:12.5px}
+th,td{text-align:left; padding:10px 14px; border-bottom:1px solid var(--line-2); vertical-align:top}
+thead th{
+  font-size:10px; letter-spacing:.11em; text-transform:uppercase; color:var(--muted);
+  font-weight:600; background:var(--surface-2); white-space:nowrap;
+}
+tbody tr:last-child td{border-bottom:0}
+td.num{font-variant-numeric:tabular-nums; white-space:nowrap}
+td.day{color:var(--muted); white-space:nowrap}
+.tag{font-size:10px; letter-spacing:.08em; text-transform:uppercase; padding:1px 6px; border:1px solid currentColor; border-radius:2px; white-space:nowrap}
+.tag.no{color:var(--artifact)} .tag.ok{color:var(--signal)} .tag.wa{color:var(--warn)}
+
+/* ── close ────────────────────────────────────────── */
+.close{background:var(--surface); border:1px solid var(--line); border-top:3px solid var(--signal); padding:26px 26px 22px}
+.close h3{margin-top:0}
+.quote{
+  font-size:17px; line-height:1.6; color:var(--ink); border-left:2px solid var(--line);
+  padding-left:18px; margin:0 0 16px; max-width:66ch;
+}
+footer{font-family:var(--mono); font-size:11.5px; color:var(--muted); line-height:1.7; margin-top:56px; padding-top:20px; border-top:1px solid var(--line)}
+
+@media (max-width:640px){
+  body{font-size:16px}
+  .row,.axis{grid-template-columns:1fr}
+  .rlabel{text-align:left}
+  .rval{justify-content:flex-start; min-width:0}
+  .axis .ticks{grid-column:1}
+  .axis .sp{display:none}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="wrap">
+
+<header>
+  <p class="eyebrow"><span>MIRAGE</span><span>Validity audit</span><span>Updated 19 Aug 2026</span><span>10 days to deadline</span><span>Fixes verified</span></p>
+  <h1>What the 0.909 AUROC<br>is actually measuring</h1>
+  <p class="verdict">Your E4 number reproduces exactly — I re-derived <b>0.9089</b> from the 39,000 traces on disk. But <b>two of its five classes are tautologies</b>: the injector writes a field, and the metric reads that same field back. Strip the three coupled features and the probe falls to <b>0.649</b>, which fails your own G-4 gate. The fix is not more seeds or wider bootstraps — it is that <b>retrieval in your pipeline is currently a no-op</b>, which is also why E5 has no data to run on.<br><br><b>Since this was written, all eight defects have been fixed and verified on GPU</b> — jump to <a href="#fixed">what changed</a>.</p>
+
+  <div class="stats">
+    <div class="stat"><span class="v">0.9089</span><span class="k">Published E4 macro AUROC — reproduced exactly</span></div>
+    <div class="stat bad"><span class="v">0.649</span><span class="k">After removing 3 injector-coupled features</span></div>
+    <div class="stat bad"><span class="v">0 / 300</span><span class="k">Natural retrieval failures found (K3 needs 150)</span></div>
+    <div class="stat bad"><span class="v">10.0 / 10</span><span class="k">Passages selected out of candidates available</span></div>
+  </div>
+  <p class="note">All figures below were recomputed from <code>artifacts/</code> — 48,200 trace JSONs — not read from <code>results/</code>.</p>
+</header>
+
+<!-- ─────────────────────────────────────────────── -->
+<section>
+  <h2>Framing</h2>
+  <p class="h2sub">A high fingerprint AUROC is your hypothesis, not your problem</p>
+  <hr class="rule">
+  <p>Worth being precise about this before anything else, because it changes what "inflated" means. <code>PLAN.md</code> claims that fault detectors "learn implementation fingerprints of synthetic fault injectors rather than underlying faults." Under that claim, a probe that identifies <em>which injector produced a trace</em> should score <strong>high</strong>. E4 scoring 0.909 is the hypothesis being confirmed. If it had come out at 0.55 you would be writing the null-result paper.</p>
+  <p>So the threat to the work is not that the number is too good. The threat is <strong>triviality</strong>: a reviewer looks at <code>faults.py</code>, sees that the grounding injector assigns <code>trace["answer"] = donor["answer"]</code> and that <code>AGS</code> is defined as <code>answer · mean(context)</code>, and concludes you detected the field you just overwrote. That reviewer is right about two of your five classes. The finding survives only if the fingerprint persists once the direct write-then-read paths are cut — and right now it barely does.</p>
+  <p>The second threat is that the result has nothing to contrast against. The whole argument depends on the E5 transfer gap: fingerprint AUROC high, natural-fault AUROC low. You have zero natural faults, so there is currently no gap to report and the paper reduces to "we detected our own injectors."</p>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
+<section>
+  <h2>Evidence</h2>
+  <p class="h2sub">Where the 0.917 comes from</p>
+  <hr class="rule">
+  <p>Trained on E3 (200 validation queries), tested on the deduplicated E4 held-out set (300 test queries, 3,900 unique traces), query-disjoint. Each row removes a feature group and refits. Everything else is held fixed.</p>
+
+  <div class="figure">
+    <p class="figtitle">Held-out macro AUROC under feature ablation</p>
+    <p class="figsub">Amber line = G-4 gate floor (0.65) · left edge = chance (0.50)</p>
+    <div class="chart">
+
+      <div class="row">
+        <div class="rlabel head">All 15 features<br><span style="color:var(--muted); font-weight:400">the published headline</span></div>
+        <div class="track"><div class="bar ok" style="width:83.4%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.917</span><span class="chip ok">Pass</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel">− AGS<br><span style="color:var(--muted)">grounding coupling</span></div>
+        <div class="track"><div class="bar ok" style="width:60.4%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.802</span><span class="chip ok">Pass</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel">− TIHD_health, TRTR_route<br><span style="color:var(--muted)">tool coupling</span></div>
+        <div class="track"><div class="bar ok" style="width:63.9%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.820</span><span class="chip ok">Pass</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel head">− all 3 coupled features<br><span style="color:var(--muted); font-weight:400">the honest number</span></div>
+        <div class="track"><div class="bar no" style="width:29.9%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.649</span><span class="chip no">Fail</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel">− coupled − length baselines</div>
+        <div class="track"><div class="bar no" style="width:26.8%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.634</span><span class="chip no">Fail</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel">Trivial M-D0 baselines only<br><span style="color:var(--muted)">token_count, answer_length, TRTR_route</span></div>
+        <div class="track"><div class="bar no" style="width:26.3%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.632</span><span class="chip no">Fail</span></div>
+      </div>
+
+      <div class="row">
+        <div class="rlabel">Length + token count only</div>
+        <div class="track"><div class="bar no" style="width:13.4%"></div><div class="gate"></div></div>
+        <div class="rval"><span class="n">0.567</span><span class="chip no">Fail</span></div>
+      </div>
+
+    </div>
+    <div class="axis">
+      <div class="ticks">
+        <i style="left:0">0.50</i><i style="left:30%">0.65</i><i style="left:50%">0.75</i><i style="left:100%">1.00</i>
+      </div>
+      <div class="sp"></div>
+    </div>
+  </div>
+  <p class="caption">Permutation control is clean: shuffling E3 labels over 20 refits gives mean macro AUROC 0.476 (max 0.598), so there is no gross plumbing leak — the splits and the <code>fault_source</code> guard are doing their job. The problem is semantic, not procedural.</p>
+
+  <h3>Read that as a decomposition</h3>
+  <p>Chance is 0.50, the full probe is 0.917, so there is 0.417 of above-chance signal to account for. Removing three features that the injectors write directly removes 0.268 of it — <strong>64% of everything the probe knows</strong> comes from those three columns. Run it the other way and the point is sharper: <strong>those three features alone score 0.889</strong>, or 93% of the above-chance signal. The other twelve metrics contribute 0.149.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Class</th><th>AUROC, full probe</th><th>Best single feature</th><th>That feature alone</th><th>Mechanism</th></tr></thead>
+      <tbody>
+        <tr><td>grounding</td><td class="num">0.999</td><td>AGS</td><td class="num">0.996</td><td><span class="tag no">Tautology</span></td></tr>
+        <tr><td>tool_invocation</td><td class="num">0.997</td><td>TIHD_health</td><td class="num">0.815</td><td><span class="tag no">Tautology</span></td></tr>
+        <tr><td>source_degradation</td><td class="num">0.884</td><td>QCM</td><td class="num">0.797</td><td><span class="tag wa">Partly bit-exact</span></td></tr>
+        <tr><td>query_retrieval</td><td class="num">0.850</td><td>AGS</td><td class="num">0.697</td><td><span class="tag ok">Genuine</span></td></tr>
+        <tr><td>clean</td><td class="num">0.854</td><td>AGS</td><td class="num">0.684</td><td><span class="tag ok">Genuine</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">The two classes carrying the headline are the two whose metric reads the exact field the injector wrote. The three classes that require the pipeline to actually re-run sit at 0.85–0.88 — which is a real and publishable effect, just a much more modest one.</p>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
+<section>
+  <h2>Defect register</h2>
+  <p class="h2sub">Eight findings, ordered by what they cost you</p>
+  <hr class="rule">
+
+  <div class="finding crit">
+    <div class="fhead"><span class="fid">F1</span><span class="fsev">Critical</span><span class="ftitle">Two classes are write-then-read tautologies</span></div>
+    <p>In <code>faults.py</code>, the grounding injector's entire body is <code>out["answer"] = donor["answer"]</code>. In <code>metrics.py</code>, <code>AGS = answer · mean(selected_context)</code>. The injector swaps in an answer from a different question and the metric measures how well the answer matches the context. AGS alone separates grounding at 0.996.</p>
+    <p>Same shape for tools: the injector sets <code>call["ok"] = False</code>; <code>TIHD_health</code> is defined as <code>failed_tools / len(tool_history)</code>. And <code>TRTR_route</code> reduces to <code>tool_name not in {"calculator","document_lookup"}</code> — a string lookup, which <code>CLAUDE.md</code> §3 already lists as a disqualifying pattern from the prior draft.</p>
+    <div class="ev"><b>Evidence:</b> grounding 0.999, tool_invocation 0.997 in the full probe; both collapse toward 0.63 when the coupled columns are dropped.</div>
+  </div>
+
+  <div class="finding crit">
+    <div class="fhead"><span class="fid">F2</span><span class="fsev">Critical</span><span class="ftitle">The de-coupled probe fails G-4</span></div>
+    <p>G-4 requires the AUROC lower CI above 0.65 for at least one injector tier. Without the coupled features the point estimate is 0.6494 and the query-clustered 95% CI is [0.641, 0.659] — entirely below the floor. Per <code>CLAUDE.md</code> §4 rule 2 that is a binding gate failure, and kill condition K2 does not fire (it triggers at ≤ 0.60), so the branch table points at halt-and-fix rather than the null-result paper.</p>
+    <p>This is recoverable. It says the current metric suite minus its tautological members is weak, not that the hypothesis is wrong.</p>
+    <div class="ev"><b>Evidence:</b> 0.6494, cluster-bootstrap CI [0.6406, 0.6586], 1,000 resamples over 300 held-out queries.</div>
+  </div>
+
+  <div class="finding crit">
+    <div class="fhead"><span class="fid">F3</span><span class="fsev">Critical</span><span class="ftitle">Retrieval selects the entire candidate pool, so E5 has no natural faults</span></div>
+    <p>This is the one to fix first. HotpotQA distractor ships 10 candidate paragraphs per question. Your agent retrieves top-5 per subgoal and unions across 2–4 subgoals, so the mean size of <code>selected_context</code> is <strong>exactly 10.0</strong>. Nothing is ever filtered out. Retrieval is not retrieving, and every retrieval-sensitive metric (SCR, QCM, CDI_max) is measuring a set that always contains everything.</p>
+    <p>The direct consequence: <code>natural_retrieval_failure</code> is <code>False</code> for all 500 queries across E1, E3, and E4. <code>CLAUDE.md</code> §9 calls this label "a natural retrieval failure with a free label" and says it "defuses the strongest reviewer objection." It currently yields zero examples, against K3's 150-per-family floor.</p>
+    <div class="ev"><b>Evidence:</b> 0/300 clean E4 queries have no gold title in <code>selected_context</code>. Relaxing to "not <em>all</em> gold titles present" gives 11/300 (3.7%). Restricting to the union's top-3 gives 4/300. None of these reach 150.</div>
+  </div>
+
+  <div class="finding major">
+    <div class="fhead"><span class="fid">F4</span><span class="fsev">Major</span><span class="ftitle">The ten seeds are byte-identical</span></div>
+    <p>Every one of the 3,900 unique (query, condition) pairs in E4 has <em>exactly</em> the same 15 metric values across all ten seeds — maximum spread over any feature, over the whole run, is <code>0.0</code>. The generator runs with <code>do_sample=False</code>, retrieval is deterministic, and the partition shuffle uses a hard-coded constant, so the seed changes only the config hash and therefore the output directory.</p>
+    <p>So E4's 39,000 traces are 3,900 traces written ten times, and the published CI of [0.9070, 0.9108] — width 0.0038 — is that narrow because the bootstrap resampled duplicates as independent draws. <code>CLAUDE.md</code> §3 lists "0% false positive rate from 3 repeats of a deterministic pipeline — zero variance by construction" as a disqualifying pattern from the prior draft. This is the same pattern at ten repeats.</p>
+    <div class="ev"><b>Silver lining:</b> re-running on the deduplicated set with a query-level cluster bootstrap gives [0.9126, 0.9214]. The headline is robust to fixing this — it just costs you the "ten seeds" claim, and about 90% of the GPU-hours spent on E4.</div>
+  </div>
+
+  <div class="finding major">
+    <div class="fhead"><span class="fid">F5</span><span class="fsev">Major</span><span class="ftitle">The T0/T1/T2 ladder does not exist for grounding</span></div>
+    <p>The grounding branch of <code>inject()</code> has no tier condition — all three tiers execute the identical <code>out["answer"] = donor["answer"]</code>, with the same donor. I verified it downstream: for all 300 test queries, the T0, T1 and T2 grounding traces are identical vector-for-vector.</p>
+    <p><code>CLAUDE.md</code> §9 states "the injector ladder T0 → T1 → T2 is the paper" and "never collapse the tiers." It is collapsed for one of four families, which is 9,000 of E4's traces measuring the same thing three times.</p>
+    <div class="ev"><b>Evidence:</b> grounding — T0≡T1 on 300/300, T0≡T2 on 300/300. Other families differ properly (query_retrieval 0/300 identical; source_degradation and tool_invocation identical only on 11 and 56 queries respectively, where the perturbation happened to be a no-op).</div>
+  </div>
+
+  <div class="finding major">
+    <div class="fhead"><span class="fid">F6</span><span class="fsev">Major</span><span class="ftitle">TCS and SEO are the same metric</span></div>
+    <p><code>metrics.py</code> computes <code>"TCS": _mean_pairwise(trajectory)</code> and then <code>"SEO": _mean_pairwise(trajectory)</code> — the same call on the same argument. Across all 39,000 traces, <code>max|TCS − SEO| = 0</code> and r = 1.0000 on finite rows.</p>
+    <p>This is precisely the failure <code>CLAUDE.md</code> §3 records from the prior draft ("SCR and GSA reported as separate metrics… they correlated at r = 1.00"), reproduced with a new pair. E2, the metric-independence audit that would have caught it, has never been run. The suite is 14 metrics, not 15.</p>
+    <div class="ev"><b>Also:</b> both are undefined on 9.9% of traces and <code>probe.py</code> imputes NaN to −999.0, turning "inapplicable" into an extreme separable value. The rate is near-uniform across classes (9.3% everywhere except T1:query_retrieval at 16.0%), so it is a small leak rather than a large one — but it should be an explicit indicator column, not a sentinel.</div>
+  </div>
+
+  <div class="finding mod">
+    <div class="fhead"><span class="fid">F7</span><span class="fsev">Moderate</span><span class="ftitle">T1 source degradation leaves a bit-exact signature</span></div>
+    <p>T1 replaces <code>selected_context</code> with copies of <code>rejected_context</code> but leaves <code>rejected_context</code> untouched. The two sets become identical, so <code>QCM = mean(q·selected) − mean(q·rejected)</code> is exactly <code>0.0</code> — in 100% of T1:source_degradation traces, and <code>CDI_max</code> collapses to exactly <code>0.0</code> as well, because deleting one passage always leaves an identical duplicate behind.</p>
+    <p>A floating-point identity at exactly zero is not something a natural fault produces. Any threshold near zero picks this class out perfectly, and it explains most of QCM's 0.797 on this family.</p>
+    <div class="ev"><b>Evidence:</b> QCM ≡ 0.0 on 3,000/3,000 T1:source_degradation traces.</div>
+  </div>
+
+  <div class="finding mod">
+    <div class="fhead"><span class="fid">F8</span><span class="fsev">Moderate</span><span class="ftitle">Trivial baselines sit inside the probe instead of beside it</span></div>
+    <p>Three of the four M-D0 trivial baselines from <code>PLAN.md</code> — <code>token_count</code>, <code>answer_length</code>, and <code>TRTR_route</code> (tool name in registry) — are columns in the probe's feature matrix. That makes "do the novel semantic metrics beat trivial baselines" unanswerable from the current table, which is the comparison <code>CLAUDE.md</code> §4 rule 8 exists to force.</p>
+    <p>Splitting them out is good news, as it happens: baselines alone score 0.632 and the twelve non-baseline metrics score 0.869. The novel metrics do win. You just have to report the arms separately to say so.</p>
+    <div class="ev"><b>Evidence:</b> trivial baselines only 0.6315 · novel metrics only 0.8693 · all 15 together 0.9168.</div>
+  </div>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
+<section>
+  <h2>Recovery</h2>
+  <p class="h2sub">What actually proves robustness</p>
+  <hr class="rule">
+  <p>Robustness here does not come from more seeds, wider bootstraps, or more traces — you already have ten times the data you need and it is all the same data. It comes from showing the fingerprint survives when the trivial explanations are removed, and from having a natural-fault contrast to measure it against. Four moves, in dependency order.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Day</th><th>Move</th><th>Fixes</th><th>What it buys the paper</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="day">19–21</td>
+          <td><b>Make retrieval selective.</b> Stop unioning <code>selected</code> across subgoals — score the final answer context only, or set <code>top_k=2</code> and define natural failure as "not all gold titles present." If GPU budget allows, the stronger version is HotpotQA <code>fullwiki</code>, where retrieval failure is common rather than engineered.</td>
+          <td class="num">F3</td>
+          <td>Unblocks E5 entirely. Without this there is no transfer gap and no paper.</td>
+        </tr>
+        <tr>
+          <td class="day">21–22</td>
+          <td><b>Decouple the injectors from the metrics.</b> Grounding should perturb the generation, not overwrite the answer field — re-prompt the generator to assert one unsupported entity, then re-run <code>verify</code>. Tool faults should fail through real execution rather than by assigning <code>ok = False</code>. Give grounding genuine T1/T2 variants.</td>
+          <td class="num">F1, F5, F7</td>
+          <td>Turns "we detected the field we wrote" into a fingerprint claim a reviewer cannot dismiss in one paragraph.</td>
+        </tr>
+        <tr>
+          <td class="day">22</td>
+          <td><b>Run E2.</b> It is an afternoon: correlation matrix, VIF, drop exact duplicates, replace the −999 sentinel with an explicit <code>is_defined</code> indicator column per metric.</td>
+          <td class="num">F6</td>
+          <td>Removes the one defect that most resembles the prior draft's headline failure.</td>
+        </tr>
+        <tr>
+          <td class="day">23–25</td>
+          <td><b>Re-run E4 as three pre-registered arms</b> — trivial baselines, novel metrics, all features — with 300 queries, one seed, and query-level cluster bootstrap. Then run E5 against the natural faults from move one.</td>
+          <td class="num">F2, F4, F8</td>
+          <td>The gap between arm three on injected faults and arm three on natural faults <em>is</em> the result.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">Days 26–29 leave room for E6 decomposition and drafting. E7's hardened injectors and E8's judge comparison are the first things to cut if time runs short — E5 is not, because it carries the claim.</p>
+
+  <h3>On whether it is novel</h3>
+  <p>Your friend is right that it is a good idea, and right that it is not untouched. Shortcut learning in synthetic-corruption benchmarks is well documented, and the closest neighbours are the work on hallucination-detection benchmarks whose synthetic negatives are separable by surface statistics, plus the general "clever Hans" literature on probing classifiers. What has not been done carefully, as far as I can tell from your <code>PLAN.md</code> framing, is the specific pairing: an <em>agentic</em> RAG trace, a tiered injector ladder from naive to hardened, and a quantified transfer gap to same-system natural faults. That is a real contribution — but E0, the prior-art hardening loop that would establish it, has not been run, and it is the cheapest experiment on the list.</p>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
+<section id="fixed">
+  <h2>Status · 19 Aug</h2>
+  <p class="h2sub">All eight defects fixed and verified on GPU</p>
+  <hr class="rule">
+  <p>The code is rebuilt and two pre-flights have run on one A6000. Every row below was re-measured from fresh traces, not asserted. Full detail in <code>PLAN_V2.md</code>; the regression check is <code>scripts/audit_probe_validity.py</code>, and <code>tests/test_negative_controls.py</code> (E10, 20 assertions) now fails if any of these return.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Defect</th><th>v1</th><th>v2, measured</th><th></th></tr></thead>
+      <tbody>
+        <tr><td>F3 retrieval selects everything</td><td class="num">10.0 / 10 passages</td><td class="num">2.0 / 10</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F3 natural retrieval failures</td><td class="num">0 / 500</td><td class="num">22.5%</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F5 grounding tier ladder</td><td class="num">T0≡T1≡T2 on 300/300</td><td class="num">0 / 24 identical</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F1 hardened tool fault visible to TIHD_health</td><td class="num">100% by assignment</td><td class="num">6/24 = clean baseline</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F7 QCM pinned to bit-exact 0.0</td><td class="num">3000 / 3000</td><td class="num">0</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F6 duplicate metrics</td><td class="num">TCS ≡ SEO, r = 1.0000</td><td class="num">no pair &#124;r&#124; &gt; 0.95</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F4 seed replication</td><td class="num">10 seeds byte-identical</td><td class="num">injection now seeded</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>F2 / F8 gate and baselines</td><td class="num">one blended number</td><td class="num">5 pre-registered arms</td><td><span class="tag ok">Fixed</span></td></tr>
+        <tr><td>Throughput</td><td class="num">≈5 s / trace</td><td class="num">≈1.7 s / trace</td><td><span class="tag ok">3× faster</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="caption">The hardened T2 tool fault is the one to look at: it executes a <em>valid</em> expression with two operands transposed, so the call succeeds, the registry is clean, and it returns a real but wrong number. Both tool-health metrics are blind to it by construction — which is what makes it a fault rather than an assignment.</p>
+
+  <h3>Two decisions the measurements forced</h3>
+  <p><code>answer_top_k</code> went to <strong>2</strong>, not 3: a cross-encoder sweep over 300 real traces put the natural-failure rate at 11.7% for k=3 and 22.3% for k=2. Padding the candidate pool with random paragraphs from other questions did nothing at all — the reranker discards them — and hard negatives added only ~5 points before saturating, so pool padding was dropped to an E9 ablation.</p>
+  <p>At 22.3%, K3's 150-per-class bar needs about 670 queries, so the test split grows to <strong>800</strong>. That is nearly free: the natural arm is a label on <em>clean</em> traces, so 800 clean runs cost one pipeline pass each while injection stays at 300 queries × 12 conditions. Whole plan: <strong>≈11.5 GPU-hours</strong> against v1's ≈70.</p>
+
+  <h3>Do the metrics actually work?</h3>
+  <p>Measured on the P2 pre-flight — 24 queries, all 12 conditions, real traces. Each cell is Cohen's <em>d</em> against clean: the strongest metric for that condition, and how far it moves. Above 0.8 is a large effect; below 0.2 is nothing.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Fault</th><th>T0 — naive</th><th>T1 — published-style</th><th>T2 — hardened</th></tr></thead>
+      <tbody>
+        <tr><td>grounding</td><td class="num">AGS <b>−7.45</b></td><td class="num">AGS −0.40</td><td class="num">AGS −0.39</td></tr>
+        <tr><td>tool_invocation</td><td class="num">TRTR_route <b>+4.40</b></td><td class="num">TIHD_health <b>+2.82</b></td><td class="num">nothing — all ≈0.00</td></tr>
+        <tr><td>source_degradation</td><td class="num">AGS −0.35</td><td class="num">QCM <b>−2.30</b>, SCR <b>+1.67</b></td><td class="num">CDI_max +0.70</td></tr>
+        <tr><td>query_retrieval</td><td class="num">SCR +0.69</td><td class="num">SCR <b>+1.22</b>, QCM −0.85</td><td class="num">TCS +0.45</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p><strong>Yes, and the pattern is the paper.</strong> Look along the grounding row: the naive injector produces an effect of <b>−7.45</b>, which is enormous — any detector will ace it. The faithful published-style version of the <em>same fault</em> gives <b>−0.40</b>. That is a nineteenfold collapse in detectability from changing nothing but the injector's implementation. Now read the top-right cell: the hardened tool fault — a valid calculator call with two operands transposed, returning a real but wrong number — moves <em>every one of the fourteen metrics by essentially zero</em>. It is completely invisible to the suite.</p>
+  <p>That is the thesis stated as a measurement rather than an argument: what these detectors mostly detect is how the fault was manufactured. And it is now demonstrated by construction, so the "you detected the field you overwrote" objection no longer applies — in v2 nothing writes a field a metric reads.</p>
+  <p>Two honest caveats. The real retrieval metrics <strong>do</strong> work: QCM at −2.30 and SCR at +1.67 on T1 source degradation are genuine large effects on a fault the pipeline actually experienced, and they survive into T2 at reduced size. But six of the fourteen metrics — IPS, MUT, SRS, GSA, ICRR, token_count — barely move anywhere, which is a finding E2 should report rather than something to hide. And this is 24 queries: directional only. The real numbers come from E3 and E4.</p>
+
+  <h3>How good are they at the actual job?</h3>
+  <p>Different question from the fingerprint AUROC. A practitioner wants "is this trace broken?", not "which injector made it?". Below: 25 repeated query-disjoint splits of the P2 traces, all 14 metrics, detecting each fault family against clean.</p>
+
+  <div class="tw">
+    <table>
+      <thead><tr><th>Fault family</th><th>T1 — published-style<br>AUROC / macro-F1</th><th>T2 — hardened<br>AUROC / macro-F1</th><th>Drop</th></tr></thead>
+      <tbody>
+        <tr><td>tool_invocation</td><td class="num">0.975 / 0.933</td><td class="num">0.535 / 0.571</td><td class="num"><b>−0.44</b></td></tr>
+        <tr><td>source_degradation</td><td class="num">0.938 / 0.897</td><td class="num">0.694 / 0.715</td><td class="num">−0.24</td></tr>
+        <tr><td>query_retrieval</td><td class="num">0.834 / 0.803</td><td class="num">0.600 / 0.624</td><td class="num">−0.23</td></tr>
+        <tr><td>grounding</td><td class="num">0.610 / 0.618</td><td class="num">0.612 / 0.611</td><td class="num">0.00</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <p>Three readings. First, <strong>on the tier the literature actually uses, these metrics are genuinely good</strong> — 0.83 to 0.98 AUROC on retrieval, source and tool faults, comfortably past your own G-3 bar of 0.70 macro-F1. They are not broken and the paper should not say they are. Second, <strong>the same metrics fall to 0.54–0.69 when the identical fault is injected in a hardened way</strong>, with tool detection collapsing from 0.975 to near chance. Third, <strong>grounding sits at 0.61 regardless of tier</strong> — this suite cannot detect hallucination, which is exactly why PLAN.md forbids claiming natural grounding without human annotation. That guard was right.</p>
+  <p>On comparability: there is no state of the art for the fingerprint number, because nobody publishes it — it is a diagnostic, not a benchmark. The detection numbers <em>are</em> comparable to published RAG-detector results, but that comparison is the trap the paper is about, since those published numbers are themselves measured on T0/T1-style injectors. Matching them is not the contribution. <strong>The contribution is that the number depends on the injector tier, and the tier is never reported.</strong> Making that concrete needs E8 (the symmetric LLM-judge baseline) and E0 (the prior-art loop) — both unrun, both cheap, and together they are what turns this table into a claim about the field rather than about one codebase.</p>
+  <p class="caption">Caveat that matters: 24 queries, so these carry ±0.02–0.07. The real numbers come from E3 and E4. One thing to settle before then — pooling all four families into one "is it faulty" label gives only 0.672, well under G-3's 0.70, while per-family detection passes easily. Decide which of those G-3 means, and write it down before you see the result.</p>
+
+  <h3>One thing still needs your sign-off</h3>
+  <p><code>CLAUDE.md</code> §4 rule 10 demands five seeds minimum and ten for headline numbers. That rule assumed seeds produce variance; under greedy decoding they did not, which is how v1 paid ten times over for identical traces. v2 makes <em>injection</em> stochastic so seeds genuinely vary the faulted traces, and plans 3 for E3 and 5 for E4 with query-cluster bootstrap as the primary interval. That is a change to a pre-registered statistical choice, so §8 says it is your call, not mine.</p>
+</section>
+
+<!-- ─────────────────────────────────────────────── -->
+<section>
+  <div class="close">
+    <h3>The sentence you can defend today</h3>
+    <p class="quote">On held-out HotpotQA queries, a linear probe recovers which synthetic injector produced a trace at macro AUROC 0.917 [0.913, 0.921]; removing the three metrics that read fields the injectors write directly leaves 0.649 [0.641, 0.659], and trivial length baselines alone reach 0.632.</p>
+    <p style="font-size:15.5px; color:var(--ink-2); max-width:66ch; margin-bottom:0">That is an honest, interesting, publishable sentence — the ablation is arguably a better result than the headline, because it shows how much of a detector's apparent skill is injector-recognition. It is not yet the paper, because the paper needs the natural-fault half of the comparison. Fix retrieval first.</p>
+  </div>
+</section>
+
+<footer>
+  Recomputed 18 Aug 2026 from <code>artifacts/{E1_pipeline, E3_positive_control, E4_fingerprint}</code> — 48,200 trace JSONs.<br>
+  Probe: logistic regression, standardised features, trained on E3 (200 val queries) and tested on deduplicated E4 (300 test queries, 3,900 traces), query-disjoint, <code>fault_source</code> excluded from features.<br>
+  Confidence intervals: 1,000× bootstrap resampling whole queries, not rows.
+</footer>
+
+</div>

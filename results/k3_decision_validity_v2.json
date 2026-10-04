@@ -1,0 +1,455 @@
+{
+  "analysis": "family_matched_decision_validity",
+  "by_tier": {
+    "T0": {
+      "n_conditions": 2,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": 0.2631578947368421,
+        "n_resamples": 997,
+        "p_value": 0.03015873015873016,
+        "tau": 0.7142857142857143
+      },
+      "selection_validity": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": {
+        "all_features": 0.7572416666666666,
+        "decoupled": 0.7560916666666666,
+        "judge": 0.5997291666666666,
+        "nli": 0.5007375000000001,
+        "nli-large": 0.51939375,
+        "semantic_only": 0.7446416666666666,
+        "trivial_baselines": 0.6015708333333334
+      }
+    },
+    "T1": {
+      "n_conditions": 2,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": 0.29411764705882354,
+        "n_resamples": 997,
+        "p_value": 0.010714285714285714,
+        "tau": 0.8095238095238096
+      },
+      "selection_validity": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": {
+        "all_features": 0.9217041666666667,
+        "decoupled": 0.9213374999999999,
+        "judge": 0.7469708333333334,
+        "nli": 0.5506645833333333,
+        "nli-large": 0.630975,
+        "semantic_only": 0.9168916666666667,
+        "trivial_baselines": 0.6442833333333333
+      }
+    },
+    "T2": {
+      "n_conditions": 2,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": 0.5555555555555556,
+        "n_resamples": 997,
+        "p_value": 0.002777777777777778,
+        "tau": 0.9047619047619049
+      },
+      "selection_validity": false,
+      "synthetic_best": "semantic_only",
+      "synthetic_ranking": {
+        "all_features": 0.724525,
+        "decoupled": 0.7239249999999999,
+        "judge": 0.5798937500000001,
+        "nli": 0.516675,
+        "nli-large": 0.5768604166666667,
+        "semantic_only": 0.7281625,
+        "trivial_baselines": 0.5361020833333334
+      }
+    }
+  },
+  "by_tier_all_families_deprecated": {
+    "T0": {
+      "n_conditions": 4,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": 0.058823529411764705,
+        "n_resamples": 997,
+        "p_value": 0.03015873015873016,
+        "tau": 0.7142857142857143
+      },
+      "selection_validity": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": {
+        "all_features": 0.8784416666666667,
+        "decoupled": 0.5885447916666666,
+        "judge": 0.6683239583333332,
+        "nli": 0.5093875,
+        "nli-large": 0.5721156249999999,
+        "semantic_only": 0.7315135416666666,
+        "trivial_baselines": 0.667521875
+      }
+    },
+    "T1": {
+      "n_conditions": 4,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": 0.5,
+        "n_resamples": 997,
+        "p_value": 0.002777777777777778,
+        "tau": 0.9047619047619049
+      },
+      "selection_validity": true,
+      "synthetic_best": "all_features",
+      "synthetic_ranking": {
+        "all_features": 0.8529312499999999,
+        "decoupled": 0.6801333333333333,
+        "judge": 0.700196875,
+        "nli": 0.530178125,
+        "nli-large": 0.634228125,
+        "semantic_only": 0.8519291666666667,
+        "trivial_baselines": 0.5803052083333333
+      }
+    },
+    "T2": {
+      "n_conditions": 4,
+      "natural_best": "all_features",
+      "ranking_validity": {
+        "ci_high": 1.0,
+        "ci_low": -0.411764705882353,
+        "n_resamples": 997,
+        "p_value": 0.2388888888888889,
+        "tau": 0.4285714285714286
+      },
+      "selection_validity": false,
+      "synthetic_best": "nli-large",
+      "synthetic_ranking": {
+        "all_features": 0.5900083333333334,
+        "decoupled": 0.5785843749999999,
+        "judge": 0.5890666666666666,
+        "nli": 0.5144635416666667,
+        "nli-large": 0.5952739583333333,
+        "semantic_only": 0.5904489583333333,
+        "trivial_baselines": 0.5171208333333334
+      }
+    }
+  },
+  "candidate_sets": {
+    "A_all": {
+      "by_tier": {
+        "T0": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "all_features",
+            "natural_winner_probability": {
+              "all_features": 0.968,
+              "decoupled": 0.02,
+              "judge": 0.001,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.011,
+              "trivial_baselines": 0.0
+            },
+            "point_agreement": true,
+            "point_regret": 0.0,
+            "regret": {
+              "bootstrap_mean": 0.007208178985622816,
+              "ci_high": 0.03358680301400305,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.0
+            },
+            "selection_agreement_probability": 0.623,
+            "synthetic_winner": "all_features",
+            "synthetic_winner_probability": {
+              "all_features": 0.636,
+              "decoupled": 0.355,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.009,
+              "trivial_baselines": 0.0
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.767568632602128,
+          "natural_auroc_of_synthetic_choice": 0.767568632602128,
+          "natural_best": "all_features",
+          "regret": 0.0,
+          "selection_validity": true,
+          "synthetic_best": "all_features"
+        },
+        "T1": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "all_features",
+            "natural_winner_probability": {
+              "all_features": 0.961,
+              "decoupled": 0.027,
+              "judge": 0.002,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.01,
+              "trivial_baselines": 0.0
+            },
+            "point_agreement": true,
+            "point_regret": 0.0,
+            "regret": {
+              "bootstrap_mean": 0.007939227121874507,
+              "ci_high": 0.034239014554599545,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.0
+            },
+            "selection_agreement_probability": 0.569,
+            "synthetic_winner": "all_features",
+            "synthetic_winner_probability": {
+              "all_features": 0.584,
+              "decoupled": 0.391,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.025,
+              "trivial_baselines": 0.0
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.767568632602128,
+          "natural_auroc_of_synthetic_choice": 0.767568632602128,
+          "natural_best": "all_features",
+          "regret": 0.0,
+          "selection_validity": true,
+          "synthetic_best": "all_features"
+        },
+        "T2": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "all_features",
+            "natural_winner_probability": {
+              "all_features": 0.968,
+              "decoupled": 0.024,
+              "judge": 0.001,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.007,
+              "trivial_baselines": 0.0
+            },
+            "point_agreement": false,
+            "point_regret": 0.015094793992731725,
+            "regret": {
+              "bootstrap_mean": 0.015501165198744591,
+              "ci_high": 0.030645324604972886,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.015094793992731725
+            },
+            "selection_agreement_probability": 0.038,
+            "synthetic_winner": "semantic_only",
+            "synthetic_winner_probability": {
+              "all_features": 0.025,
+              "decoupled": 0.185,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.79,
+              "trivial_baselines": 0.0
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.767568632602128,
+          "natural_auroc_of_synthetic_choice": 0.7524738386093963,
+          "natural_best": "all_features",
+          "regret": 0.015094793992731725,
+          "selection_validity": false,
+          "synthetic_best": "semantic_only"
+        }
+      },
+      "detectors": [
+        "decoupled",
+        "all_features",
+        "semantic_only",
+        "trivial_baselines",
+        "nli",
+        "nli-large",
+        "judge"
+      ],
+      "natural_best": "all_features"
+    },
+    "B_validity_clean": {
+      "by_tier": {
+        "T0": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "semantic_only",
+            "natural_winner_probability": {
+              "decoupled": 0.372,
+              "judge": 0.006,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.622
+            },
+            "point_agreement": false,
+            "point_regret": 0.003962520250448853,
+            "regret": {
+              "bootstrap_mean": 0.00710791309257356,
+              "ci_high": 0.027153249472883965,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.003962520250448853
+            },
+            "selection_agreement_probability": 0.382,
+            "synthetic_winner": "decoupled",
+            "synthetic_winner_probability": {
+              "decoupled": 0.962,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.038
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.7524738386093963,
+          "natural_auroc_of_synthetic_choice": 0.7485113183589475,
+          "natural_best": "semantic_only",
+          "regret": 0.003962520250448853,
+          "selection_validity": false,
+          "synthetic_best": "decoupled"
+        },
+        "T1": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "semantic_only",
+            "natural_winner_probability": {
+              "decoupled": 0.361,
+              "judge": 0.004,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.635
+            },
+            "point_agreement": false,
+            "point_regret": 0.003962520250448853,
+            "regret": {
+              "bootstrap_mean": 0.006909066572749245,
+              "ci_high": 0.02679760793738166,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.003962520250448853
+            },
+            "selection_agreement_probability": 0.384,
+            "synthetic_winner": "decoupled",
+            "synthetic_winner_probability": {
+              "decoupled": 0.943,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.057
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.7524738386093963,
+          "natural_auroc_of_synthetic_choice": 0.7485113183589475,
+          "natural_best": "semantic_only",
+          "regret": 0.003962520250448853,
+          "selection_validity": false,
+          "synthetic_best": "decoupled"
+        },
+        "T2": {
+          "bootstrap_stability": {
+            "n_queries": 800,
+            "natural_winner": "semantic_only",
+            "natural_winner_probability": {
+              "decoupled": 0.36,
+              "judge": 0.005,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.635
+            },
+            "point_agreement": true,
+            "point_regret": 0.0,
+            "regret": {
+              "bootstrap_mean": 0.003792179132785844,
+              "ci_high": 0.0224534141025808,
+              "ci_low": 0.0,
+              "n_resamples": 1000,
+              "point": 0.0
+            },
+            "selection_agreement_probability": 0.573,
+            "synthetic_winner": "semantic_only",
+            "synthetic_winner_probability": {
+              "decoupled": 0.191,
+              "judge": 0.0,
+              "nli": 0.0,
+              "nli-large": 0.0,
+              "semantic_only": 0.809
+            }
+          },
+          "natural_auroc_of_natural_choice": 0.7524738386093963,
+          "natural_auroc_of_synthetic_choice": 0.7524738386093963,
+          "natural_best": "semantic_only",
+          "regret": 0.0,
+          "selection_validity": true,
+          "synthetic_best": "semantic_only"
+        }
+      },
+      "detectors": [
+        "decoupled",
+        "semantic_only",
+        "nli",
+        "nli-large",
+        "judge"
+      ],
+      "natural_best": "semantic_only"
+    }
+  },
+  "comparable_families": [
+    "query_retrieval",
+    "source_degradation"
+  ],
+  "experiment": "E4_k3_v2",
+  "families_without_natural_reference": [
+    "tool_invocation",
+    "grounding"
+  ],
+  "natural_best": "all_features",
+  "natural_detection": {
+    "all_features": {
+      "ci_high": 0.8098119767683377,
+      "ci_low": 0.7256610175521876,
+      "n_resamples": 1000,
+      "point": 0.767568632602128
+    },
+    "decoupled": {
+      "ci_high": 0.7897301824529457,
+      "ci_low": 0.7019405472806691,
+      "n_resamples": 1000,
+      "point": 0.7485113183589475
+    },
+    "judge": {
+      "ci_high": 0.7301055224250916,
+      "ci_low": 0.625181620741579,
+      "n_resamples": 1000,
+      "point": 0.6790960637506022
+    },
+    "nli": {
+      "ci_high": 0.5358255722913162,
+      "ci_low": 0.42879115463107625,
+      "n_resamples": 1000,
+      "point": 0.48579184727877756
+    },
+    "nli-large": {
+      "ci_high": 0.6910329066207423,
+      "ci_low": 0.5819345620346159,
+      "n_resamples": 1000,
+      "point": 0.6369860764481807
+    },
+    "semantic_only": {
+      "ci_high": 0.7937728604204888,
+      "ci_low": 0.7069558888532367,
+      "n_resamples": 1000,
+      "point": 0.7524738386093963
+    },
+    "trivial_baselines": {
+      "ci_high": 0.6450111672008969,
+      "ci_low": 0.5360924563840053,
+      "n_resamples": 1000,
+      "point": 0.5910668155348308
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "analysis": "held_out_injector_fingerprint",
+  "bootstrap_repeats": 1000,
+  "classes": [
+    "clean",
+    "grounding",
+    "query_retrieval",
+    "source_degradation",
+    "tool_invocation"
+  ],
+  "features": [
+    "QCM",
+    "ICRR",
+    "SCR",
+    "CDI_max",
+    "MUT",
+    "IPS",
+    "TCS",
+    "GSA",
+    "SEO",
+    "SRS",
+    "AGS",
+    "TRTR_route",
+    "TIHD_health",
+    "token_count",
+    "answer_length"
+  ],
+  "gate_g4": true,
+  "macro_auroc": 0.9089145925925927,
+  "macro_auroc_ci": {
+    "ci_high": 0.9107842153691901,
+    "ci_low": 0.9070074101261829,
+    "point": 0.9089145925925927
+  },
+  "n_test": 39000,
+  "n_train": 9000,
+  "seed": 11,
+  "test_experiment": "E4_fingerprint",
+  "test_queries": 300,
+  "train_experiment": "E3_positive_control",
+  "train_queries": 200
+}

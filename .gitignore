@@ -1,0 +1,28 @@
+# environments and caches
+.venv/
+venv/
+.hf_cache/
+.cache/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# large generated data: download with `make fetch-traces`
+artifacts/
+external/AEGIS/
+logs/
+
+# LaTeX build output
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+
+# secrets
+.env
+.kaggle/
+.downloads/
