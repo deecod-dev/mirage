@@ -32,7 +32,7 @@ configs/         YAML config for every experiment, plus the experiment registry
 tests/           Integrity checks and negative controls
 results/         Every result JSON the paper reports (see results/README.md)
 figures/         Figures 1-4, regenerated from results/
-paper/           Accepted AABA4ET workshop paper (paper.pdf)
+paper/           Workshop paper: LaTeX source, figures and PDF (see paper/README.md)
 docs/            Pre-registered research plan and experiment registry
 data/            How to download the raw traces and checksums
 CLAIMS.md        Confirmatory claim registry, frozen before the final runs

@@ -1,0 +1,23 @@
+%% trimspaces.sty -- LOCAL BUILD SHIM, not the CTAN package.
+%%
+%% This machine's TeX Live lacks `trimspaces`, and the CTAN source cannot be
+%% unpacked here because its .ins requires pstool.tex. `environ` (pulled in by
+%% neurips_2026.sty) uses exactly one macro from it, \trim@spaces, so this file
+%% supplies that macro using the package's own algorithm. Any real TeX
+%% distribution ships the genuine package, which takes precedence over a file
+%% shipped alongside a paper only if this one is removed -- so DELETE THIS FILE
+%% from any submission bundle.
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{trimspaces}[2026/08/22 local minimal shim]
+\begingroup
+\catcode`\Q=3
+\gdef\trim@spaces#1{%
+  \begingroup
+  \aftergroup\toks\aftergroup0\aftergroup{%
+  \expandafter\trim@trim@\expandafter\noexpand#1Q Q}%
+  \the\toks 0 %
+}
+\gdef\trim@trim@#1 Q{\trim@trim@@#1Q}
+\gdef\trim@trim@@#1Q#2{\aftergroup#1\endgroup}
+\endgroup
+\endinput

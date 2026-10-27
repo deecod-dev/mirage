@@ -25,4 +25,4 @@ fetch-traces:
 	bash scripts/fetch_traces.sh
 
 paper:
-	@echo "The compiled manuscript is located at paper/paper.pdf"
+	cd paper && pdflatex -interaction=nonstopmode paper.tex && pdflatex -interaction=nonstopmode paper.tex
